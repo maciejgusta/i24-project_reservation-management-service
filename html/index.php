@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
     <?php
         $server_name="localhost";
         $username="admin";
@@ -35,9 +34,8 @@
             $idx++;   
             echo "</tr>\n";
         }
+*/ 
 ?>
-*/
-    </table>
 
 </body>
 </html>
