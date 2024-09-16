@@ -10,9 +10,9 @@
     <table>
     <?php
         $server_name="localhost";
-        $username="root";
-        $password="";
-        $dbname="example_DB";
+        $username="admin";
+        $password="admin";
+        $dbname="new_schema";
 
         $conn = new mysqli($server_name, $username, $password, $dbname);
         if ($conn->connect_error) {
@@ -22,8 +22,8 @@
         $sql = "SELECT * FROM new_table";
         $table = $conn->query($sql);
 
-        //print_r($table);
-
+        print_r($table);
+/*
         $idx = 1;
         while ($idx <= $table->num_rows){
             echo "<tr>\n";
@@ -35,7 +35,8 @@
             $idx++;   
             echo "</tr>\n";
         }
-    ?>
+?>
+*/
     </table>
 
 </body>
