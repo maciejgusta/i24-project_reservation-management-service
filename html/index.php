@@ -21,8 +21,7 @@
         $sql = "SELECT * FROM new_table";
         $table = $conn->query($sql);
 
-        print_r($table);
-/*
+        echo "<table>\n";
         $idx = 1;
         while ($idx <= $table->num_rows){
             echo "<tr>\n";
@@ -34,7 +33,7 @@
             $idx++;   
             echo "</tr>\n";
         }
-*/ 
+        echo "</table>\n";
 ?>
 
 </body>
