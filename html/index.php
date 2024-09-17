@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="loginc">
+	<div id="login-container">
         <form action="login.php" method="post">
             <label for="username">Login:</label>
             <input type="text" id="username" name="username" required>
