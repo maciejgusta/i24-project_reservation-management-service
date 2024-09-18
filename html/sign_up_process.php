@@ -49,6 +49,6 @@ if (isset($_POST['sign_up'])){
         header("Location: sign_up.php");
         exit();
     }
-    $sql = "insert into users values (\"$username\", \"password\", "
+    //$sql = "insert into users values (\"$username\", \"password\", "
 }
 ?>
