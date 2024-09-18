@@ -1,57 +1,96 @@
+/* General style */
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f0f2f5; /* Light background */
 }
 
 #login_container {
-    width: 300px;
-    height: 200px;
-    border: 2px solid black;
-    padding: 20px;
+    width: 320px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
     text-align: center;
 }
 
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
 
 #login_form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#login_input1 {
+label {
+    align-self: flex-start;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF; /* Light blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.primary_button,
+.secondary_button {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
-    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-#login_input2 {
-    padding: 5px;
+.primary_button {
+    background-color: #007BFF;
+    color: white;
+}
+
+.primary_button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.secondary_button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.secondary_button:hover {
+    background-color: #5a6268; /* Darker grey on hover */
 }
 
 #invalid_credentials {
     color: red;
-    margin-top: 0px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-#sign_up_form {
-    display: flex;
-    flex-direction: column;
+p {
+    margin: 15px 0 10px;
+    font-size: 14px;
+    color: #777;
 }
 
-#sign_up_container {
-    width: 300px;
-    height: 320px;
-    border: 2px solid black;
-    padding: 20px;
-    text-align: center;
-}
-
-#sign_up_button {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.sign_up_input {
-    margin-bottom: 5px;
-}
