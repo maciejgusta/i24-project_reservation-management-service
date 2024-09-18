@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login_container {
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login_input1 {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#login_input2 {
+    padding: 5px;
+}
+
+#invalid_credentials {
+    color: red;
+    margin-top: 0px;
+}
+
+#sign_up_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#sign_up_container {
+    width: 300px;
+    height: 320px;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+#sign_up_button {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sign_up_input {
+    margin-bottom: 5px;
+}
