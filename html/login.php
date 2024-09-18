@@ -24,8 +24,9 @@ if (isset($_POST['login'])){
 
     if ($result->num_rows > 0){
         $user = $result->fetch_assoc();
-        echo "<h1>Logged as: ".$user["first_name"]." ".$user["last_name"]." (".$user["username"].").</h1>";
         $_SESSION['error'] = false;
+        header("Location: home.php");
+        exit();
     } else {
         $_SESSION['error'] = true;
         header('Location: index.php');
