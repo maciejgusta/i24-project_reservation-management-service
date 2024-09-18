@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="home_container">
-        <div class="home_menu">Schedule</div>
+        <a href="tm1.edu.pl"><div class="home_menu">Schedule</div></a>
         <div class="home_menu">fix a meeting</div>
         <div class="home_menu">setting</div>
     </div>
