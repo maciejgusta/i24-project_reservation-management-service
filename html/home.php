@@ -1,8 +1,4 @@
-<?php   
-    session_star();
-    $username = isset($_SESSION['username']) ? $_SESSION['username'] : "none";
-    unset($_SESSION['username']);
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +8,6 @@
     <title>Home</title>
 </head>
 <body>
-    <?php
-    echo "$username";
-    ?>
+
 </body>
 </html>
