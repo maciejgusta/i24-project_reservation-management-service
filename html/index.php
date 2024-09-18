@@ -28,7 +28,7 @@ unset($_SESSION['error']); // Clear the session error after reading it
             ?>
             <button type="submit" name="login">Log in</button>
         </form>
-        <form action="sign_up.php" id="sign_up_form" method="post">
+        <form id="sign_up_form" style="margin-top: 10px" action="sign_up.php" method="post">
             <button type="submit" name="sign_up">Sign up</button>
         </form>
     </div>

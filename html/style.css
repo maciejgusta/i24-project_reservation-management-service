@@ -41,9 +41,17 @@ html, body {
 
 #sign_up_container {
     width: 300px;
-    height: 200px;
+    height: 320px;
     border: 2px solid black;
     padding: 20px;
     text-align: center;
 }
 
+#sign_up_button {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sign_up_input {
+    margin-bottom: 5px;
+}
