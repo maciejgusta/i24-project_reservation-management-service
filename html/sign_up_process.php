@@ -50,5 +50,6 @@ if (isset($_POST['sign_up'])){
         exit();
     }
     $sql = "insert into users values (\"$username\", \"$password\", \"$first_name\", \"$last_name\", \"$phone_number\")";
+    $db->query($sql);
 }
 ?>
