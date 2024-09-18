@@ -56,20 +56,12 @@
     margin-bottom: 5px;
 }
 
-#schedule_container {
-    border: 1px solid black;
-    margin: 10px;
-    width: 30%;
+#home_container {
+    display: flex;
+    justify-content: space-around;
 }
 
-#meeting_container {
-    border: 1px solid black;
-    margin: 10px;
-    width: 30%;
-    display: inline-block;
-}
-
-#settings_container {
+#schedule_container, #meeting_container, #settings_container {
     border: 1px solid black;
     margin: 10px;
     width: 30%;
