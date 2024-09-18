@@ -35,7 +35,7 @@ if (isset($_POST['sign_up'])){
         // error displaying
     }
     if (strlen($password) < 8){
-        $_SESSION['error'] = "Password too short, it must be at least 8 characters long!";
+        $_SESSION['error'] = "Password is too short, it must be at least 8 characters long!";
         header("Location: sign_up.php");
         exit();
     }
