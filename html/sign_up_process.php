@@ -51,6 +51,6 @@ if (isset($_POST['sign_up'])){
     }
     $sql = "insert into users values (\"$username\", \"$password\", \"$first_name\", \"$last_name\", \"$phone_number\");";
     echo "$sql";
-    //$db->query($sql);
+    $db->query($sql);
 }
 ?>
