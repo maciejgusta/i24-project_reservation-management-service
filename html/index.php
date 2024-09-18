@@ -15,7 +15,6 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p>test</p>
 	<div id="login_container">
         <form id="login_form" action="login.php" method="post">
             <label for="username">Username:</label>
