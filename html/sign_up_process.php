@@ -51,6 +51,10 @@ if (isset($_POST['sign_up'])){
     }
     $sql = "insert into users values (\"$username\", \"$password\", \"$first_name\", \"$last_name\", \"$phone_number\");";
     echo "$sql";
-    $db->query($sql);
+    if ($db->query($sql) == TRUE){
+        echo "added new record succesfully";
+    } else {
+        echo "error".$db->error;
+    }
 }
 ?>
