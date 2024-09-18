@@ -59,4 +59,17 @@
 #schedule_container {
     border: 1px solid black;
     margin: 10px;
+    width: 30%;
+}
+
+#meeting_container {
+    border: 1px solid black;
+    margin: 10px;
+    width: 30%;
+}
+
+#settings_container {
+    border: 1px solid black;
+    margin: 10px;
+    width: 30%;
 }

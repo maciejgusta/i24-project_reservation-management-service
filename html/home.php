@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="schedule_container">Schedule</div>
-    <div id="fix a meeting">fix a meeting</div>
-    <div id="settings">setting</div>
+    <div id="meeting_container">fix a meeting</div>
+    <div id="settings_container">setting</div>
 </body> 
 </html>
