@@ -49,7 +49,7 @@ if (isset($_POST['sign_up'])){
         header("Location: sign_up.php");
         exit();
     }
-    $sql = "insert into users values (\"$username\", \"$password\", \"$first_name\", \"$last_name\", \"$phone_number\");";
+    $sql = "insert into users (username, password, first_name, last_name, phone_number) values (\"$username\", \"$password\", \"$first_name\", \"$last_name\", \"$phone_number\");";
     echo "$sql";
     if ($db->query($sql) == TRUE){
         echo "added new record succesfully";
