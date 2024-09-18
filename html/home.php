@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="home_container">
-        <div class="home_menu"><a href="tm1.edu.pl">Schedule</a></div>
+        <div class="home_menu" onclick="window.location.href='tm1.edu.pl'">Schedule</div>
         <div class="home_menu">fix a meeting</div>
         <div class="home_menu">setting</div>
     </div>
