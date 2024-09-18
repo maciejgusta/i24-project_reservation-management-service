@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="home_container" href="tm1.edu.pl">
-        <div id="schedule_container">Schedule</div>
-        <div id="meeting_container">fix a meeting</div>
-        <div id="settings_container">setting</div>
+    <div id="home_container">
+        <div class="home_menu">Schedule</div>
+        <div class="home_menu">fix a meeting</div>
+        <div class="home_menu">setting</div>
     </div>
 </body> 
 </html>
