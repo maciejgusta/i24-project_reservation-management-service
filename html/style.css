@@ -1,4 +1,4 @@
-html, body {
+#html_form, #body_form {
     height: 100%;
     margin: 0;
     display: flex;
