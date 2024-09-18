@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="home_container">
+    <div id="home_container" href="tm1.edu.pl">
         <div id="schedule_container">Schedule</div>
         <div id="meeting_container">fix a meeting</div>
         <div id="settings_container">setting</div>
