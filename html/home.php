@@ -12,8 +12,8 @@
     <title>Home</title>
 </head>
 <body>
-    <?php
-        echo $username;
-    ?>
-</body>
+    <div id="schedule_container">Schedule</div>
+    <div id="fix a meeting">fix a meeting</div>
+    <div id="settings">setting</div>
+</body> 
 </html>

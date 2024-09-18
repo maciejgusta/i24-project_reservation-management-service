@@ -55,3 +55,8 @@ html, body {
 .sign_up_input {
     margin-bottom: 5px;
 }
+
+#schedule_container {
+    border: 1px solid black;
+    margin: 10px;
+}
