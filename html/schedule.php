@@ -7,8 +7,9 @@
 </head>
 <body>
     <?php
+        $date = date("Y-m-d");
         $day = date("w");
-        echo $day;
+        $start_w = $date->modify(-6+(7-$day));
     ?>
 </body>
 </html>
