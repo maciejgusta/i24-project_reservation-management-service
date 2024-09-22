@@ -7,10 +7,26 @@
 </head>
 <body>
     <?php
-        $date = date("Y-m-d");
-        $day = date("w");
-        $start_w = $date->modify(-6+(7-$day));
-        echo $start_w;
+        $date = new DateTime();
+        $day = (int)$date->format("w");
+        $chg = "-".(6-$day)." days";
+        //echo "$date   $chg";
+        $date->modify($chg);
+
+        $ws = $date->format("d-m-Y");
+        $we = $date->modify("+6 days")->format("d-m-Y");
+        echo "<h1 style=\"text-align: center\">".$ws." - ".$we."</h1>";
+
+        // $servername = "localhost";
+        // $username = "admin";
+        // $password = "admin";
+        // $dbname = "jadzia";
+
+        // $db = new mysqli($servername, $username, $password, $dbname);
+        
+        // $sql = "select * from visits";
+        // $result = $db->query($sql);
+        // print_r($result);
     ?>
 </body>
 </html>
