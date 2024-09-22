@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 #html_form, #body_form {
     height: 100%;
     margin: 0;
@@ -67,4 +71,70 @@
     width: 30%;
     text-align: center;
     cursor: pointer;
+}
+
+.calendar_block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 1px solid black;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.dotted_lines {
+    border-bottom: 2px dotted black;
+    position: absolute;
+    width: 89%;
+    box-sizing: border-box;
+}
+
+#dl1 {
+    height: 9%;
+}
+#dl2 {
+    height: 18%;
+}
+#dl3 {
+    height: 27%;
+}
+#dl4 {
+    height: 36%;
+}
+#dl5 {
+    height: 45%;
+}
+#dl6 {
+    height: 54%;
+}
+#dl7 {
+    height: 63%;
+}
+#dl8 {
+    height: 72%;
+}
+#dl9 {
+    height: 81%;
+}
+
+.time_cell {
+    border: 1px solid black;
+    width: 10%;
+    height: 100%;
+}
+
+.day_cell {
+    border: 1px solid black;
+    width: 15%;
+    height: 100%;
+}
+
+.hour_cell {
+    border: 1px solid black;
+    height: 10%;
+    width:100%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 5px;
 }
