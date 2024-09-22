@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-        echo date("Y-m-d");
-        echo date("l");
+        $day = date("w");
+        echo $day;
     ?>
 </body>
 </html>
