@@ -69,6 +69,8 @@
             $curday = $date->format("Y-m-d");
             $sql = "select * from visits where id_user=$user_id and visit_date=\"$curday\"";
             $result = $db->query($sql);
+            $nuvisits = $db->query('select * from visits where not id_user="'.$user_id.'" and visit_date="'.$curday.'";');
+
             if ($result->num_rows > 0){
                 while ($visit = $result->fetch_assoc()){
                     $service_time = ($visit['visit_time']);
@@ -77,6 +79,17 @@
                     $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
                     $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
                     echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%;">'.$service["service_name"].' '.$service["service_price"].'$</div>';
+                }
+            }
+
+            if ($nuvisits->num_rows > 0){
+                while ($visit = $nuvisits->fetch_assoc()){
+                    $service_time = ($visit['visit_time']);
+                    $top = (((int)substr($service_time, 0, 2))+((int)substr($service_time, 3, 2)/60)+((int)substr($service_time, 6, 2)/3600)-8)*10;
+                    $service_duration = $db->query('select service_duration from services where id_service="'.$visit["id_service"].'";')->fetch_assoc()['service_duration'];
+                    $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
+                    $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
+                    echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">'.$service["service_name"].' '.$service["service_price"].'$</div>';
                 }
             }
             echo '</div>';

@@ -1,0 +1,5 @@
+schedule.php - przesuwanie tygodnia w lewo i prawo jakims przyciskiem, feature z teams klikasz i otwiera sie okno z mozliwoscia dodannia wizyty
+frontend to zrobienia praktycznie wszystko, zeby jakos wygladalo
+settings.php - mozliwosc usuniecia konta
+home.php - jakas strona glowna (logo etc) frontend
+
