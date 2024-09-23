@@ -41,7 +41,7 @@
         for ($i = 0; $i < 6; $i++){
             $cur_date = $date->format("d-m-Y");
             $cur_wk = $date->format("D");
-            echo '<div class="date_cell">'.$cur_date.' ('.$cur_wk.')</div>';
+            echo '<div class="date_cell">'.$cur_date.'<br>('.$cur_wk.')</div>';
             $date->modify("+1 days");
         }
         $date->modify("-6 days");
@@ -71,8 +71,12 @@
             $result = $db->query($sql);
             if ($result->num_rows > 0){
                 while ($visit = $result->fetch_assoc()){
-                    print_r($visit);
-                    echo "<br>";
+                    $service_time = ($visit['visit_time']);
+                    $top = (((int)substr($service_time, 0, 2))+((int)substr($service_time, 3, 2)/60)+((int)substr($service_time, 6, 2)/3600)-8)*10;
+                    $service_duration = $db->query('select service_duration from services where id_service="'.$visit["id_service"].'";')->fetch_assoc()['service_duration'];
+                    $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
+                    $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
+                    echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%;">'.$service["service_name"].' '.$service["service_price"].'$</div>';
                 }
             }
             echo '</div>';
