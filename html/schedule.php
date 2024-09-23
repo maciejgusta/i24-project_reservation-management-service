@@ -29,12 +29,7 @@
         $dbname = "jadzia";
         $db = new mysqli($servername, $dbusername, $password, $dbname);
         $user_id = $db->query("select * from users where username=\"$username\";")->fetch_assoc()["id_user"];
-        $visits = $db->query("select * from visits where id_user=$user_id;");
-        // if ($visits->num_rows > 0){
-        //     while ($visit = $visits->fetch_assoc()){
-        //         print_r($visit);
-        //     }
-        // }
+
         echo '
         <div class="calendar_block">
 
@@ -49,6 +44,7 @@
             echo '<div class="date_cell">'.$cur_date.' ('.$cur_wk.')</div>';
             $date->modify("+1 days");
         }
+        $date->modify("-6 days");
 
         echo '
         </div>
@@ -67,13 +63,25 @@
                 <div class="hour_cell">16:00</div>
                 <div class="hour_cell">17:00</div>
             </div>
+        ';
+        for ($i = 0; $i < 6; $i++){
+            echo '<div class="day_block">';
+            $curday = $date->format("Y-m-d");
+            $sql = "select * from visits where id_user=$user_id and visit_date=\"$curday\"";
+            $result = $db->query($sql);
+            if ($result->num_rows > 0){
+                while ($visit = $result->fetch_assoc()){
+                    print_r($visit);
+                    echo "<br>";
+                }
+            }
+            echo '</div>';
 
-            <div class="day_block"></div>
-            <div class="day_block"></div>
-            <div class="day_block"></div>
-            <div class="day_block"></div>
-            <div class="day_block"></div>
-            <div class="day_block"></div>
+            $date->modify("+1 days");
+
+        }
+        
+        echo '
 
             <div class="line" id="l10"></div>
             <div class="line" id="l20"></div>
