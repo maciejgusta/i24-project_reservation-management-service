@@ -58,7 +58,7 @@
             <div class=\"hour_cell\">18:00</div>
         </div>
         <div class=\"day_cell\"></div>
-        <div class=\"day_cell\"></div>
+        <div class=\"day_cell\"><div class=\"event_cell\">test</div></div>
         <div class=\"day_cell\"></div>
         <div class=\"day_cell\"></div>
         <div class=\"day_cell\"></div>
