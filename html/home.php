@@ -1,6 +1,9 @@
 <?php   
     session_start();
     $username = isset($_SESSION['username']) ? $_SESSION['username'] : "none";
+    if (isset($_SESSION['date'])){
+        unset($_SESSION['date']);
+    }
 ?>
 
 <!DOCTYPE html>

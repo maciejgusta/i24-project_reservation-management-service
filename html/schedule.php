@@ -48,7 +48,7 @@
 
         <div class="date_block">
 
-            <div class="logo_cell"></div>
+            <div class="logo_cell"><img src="logo.png" alt="LOGO" id="logo"></div>
         ';
 
         for ($i = 0; $i < 6; $i++){
@@ -124,7 +124,8 @@
             <div class="line" id="l90"></div>
 
         </div>
-    
+
+        <div class="back_to_home" onclick=window.location.href=\'home.php\'>BACK TO HOMEPAGE</div>
         </div>
         ';
 

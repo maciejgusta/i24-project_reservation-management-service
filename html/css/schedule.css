@@ -127,3 +127,18 @@ body {
     align-items: center;
     font-size: 4vh;
 }
+
+.back_to_home {
+    height: 5%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
+}
