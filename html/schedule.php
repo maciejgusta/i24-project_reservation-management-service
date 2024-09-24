@@ -1,6 +1,15 @@
 <?php
     session_start();
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
+    if (isset($_SESSION['date'])){
+        $date = $_SESSION['date'];
+    } else {
+        $date = new DateTime();
+        $day = (int)$date->format("w");
+        $chg = $day == 0 ? "+1 days" : "-".($day-1)." days";
+        $date->modify($chg);
+        $_SESSION['date'] = $date;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +22,6 @@
 </head>
 <body>
     <?php
-        $date = new DateTime();
-        $day = (int)$date->format("w");
-        $chg = $day == 0 ? "+1 days" : "-".($day-1)." days";
-        $date->modify($chg);
-
         $ws = $date->format("d-m-Y");
         $we = $date->modify("+5 days")->format("d-m-Y");
 
@@ -31,7 +35,16 @@
         $user_id = $db->query("select * from users where username=\"$username\";")->fetch_assoc()["id_user"];
 
         echo '
+
         <div class="calendar_block">
+
+        <div class="week_block">
+
+            <div class="outer_week" onclick="window.location.href=\'lw.php\'"> < </div>
+            <div class="inner_week">'.$ws.' - '.$we.'</div>
+            <div class="outer_week" onclick="window.location.href=\'rw.php\'"> > </div>
+        
+        </div>
 
         <div class="date_block">
 
@@ -97,7 +110,7 @@
             $date->modify("+1 days");
 
         }
-        
+        $date->modify("-6 days");        
         echo '
 
             <div class="line" id="l10"></div>
