@@ -22,19 +22,23 @@ unset($_SESSION['error']); // Clear the session error after reading it
 <body>
 	<div id="log_in_block">
         <form id="log_in_form" action="login.php" method="post">
-            <label id="username_label" for="username">Username:</label>
-            <input id="username_input" type="text" name="username" required>
-            <label id="password_label" for="password">Password:</label>
-            <input id="password_input" type="password" name="password" required><br>
+            <label class="label" for="username">Username:</label>
+            <input class="input" type="text" name="username" required>
+            <label class="label" for="password">Password:</label>
+            <input class="input" type="password" name="password" required>
+            
+            <div id="credentials_block">
             <?php
                 if ($error == true){
-                    echo "<p id=\"invalid_credentials\">Invalid username or password!</p>";
+                    echo '<div id="credentials_div">Invalid username or password!</div>';
                 }
             ?>
-            <button type="submit" name="login">Log in</button>
+            </div>
+            
+            <button id="log_in_button" type="submit" name="login">Log in</button>
         </form>
         <form id="sign_up_form" style="margin-top: 10px" action="sign_up.php" method="post">
-            <button type="submit" name="sign_up">Sign up</button>
+            <button id="sign_up_button" type="submit" name="sign_up">Sign up</button>
         </form>
     </div>
 </body>
