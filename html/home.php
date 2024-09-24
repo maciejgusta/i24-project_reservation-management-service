@@ -1,6 +1,7 @@
 <?php
     session_start();
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
+    $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
     if (isset($_SESSION['date'])){
         $date = $_SESSION['date'];
     } else {
@@ -17,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
@@ -32,7 +33,6 @@
         $password = "admin";
         $dbname = "jadzia";
         $db = new mysqli($servername, $dbusername, $password, $dbname);
-        $user_id = $db->query("select * from users where username=\"$username\";")->fetch_assoc()["id_user"];
 
         echo '
 
@@ -80,9 +80,9 @@
         for ($i = 0; $i < 6; $i++){
             echo '<div class="day_block">';
             $curday = $date->format("Y-m-d");
-            $sql = "select * from visits where id_user=$user_id and visit_date=\"$curday\"";
+            $sql = "select * from visits where id_user=$id_user and visit_date=\"$curday\"";
             $result = $db->query($sql);
-            $nuvisits = $db->query('select * from visits where not id_user="'.$user_id.'" and visit_date="'.$curday.'";');
+            $nuvisits = $db->query('select * from visits where not id_user="'.$id_user.'" and visit_date="'.$curday.'";');
 
             if ($result->num_rows > 0){
                 while ($visit = $result->fetch_assoc()){
@@ -102,8 +102,9 @@
                     $service_duration = $db->query('select service_duration from services where id_service="'.$visit["id_service"].'";')->fetch_assoc()['service_duration'];
                     $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
                     $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
-                    echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">'.$service["service_name"].' '.$service["service_price"].'$</div>';
-                }
+                    //echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">'.$service["service_name"].' '.$service["service_price"].'$</div>';
+                    echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">Barber busy</div>';
+                }   
             }
             echo '</div>';
 

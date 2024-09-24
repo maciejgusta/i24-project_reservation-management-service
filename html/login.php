@@ -19,13 +19,14 @@ if (isset($_POST['login'])){
         die("Connection failed" . $db->connect_error);
     }
 
-    $sql = "select * from users where username=\"$username\" and password=\"$password\"";
+    $sql = "select * from users where username=\"$username\" and password=\"$password\";";
     $result = $db->query($sql);
 
     if ($result->num_rows > 0){
         $user = $result->fetch_assoc();
         $_SESSION['error'] = false;
         $_SESSION['username'] = $username;
+        $_SESSION['id_user'] = $db->query("select id_user from users where username=\"$username\" and password=\"$password\";")->fetch_assoc()['id_user'];
         header("Location: home.php");
         exit();
     } else {
