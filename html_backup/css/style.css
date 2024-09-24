@@ -1,4 +1,8 @@
-html, body {
+body {
+    height: 100vh;
+}
+
+#html_form, #body_form {
     height: 100%;
     margin: 0;
     display: flex;
@@ -54,4 +58,17 @@ html, body {
 
 .sign_up_input {
     margin-bottom: 5px;
+}
+
+#home_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home_menu {
+    border: 1px solid black;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
 }

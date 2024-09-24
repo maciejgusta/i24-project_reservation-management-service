@@ -5,14 +5,14 @@ unset($_SESSION['error']); // Clear the session error after reading it
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html id="html_form" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>\Sign up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="body_form">
     <div id="sign_up_container">
         <form id="sign_up_form" action="sign_up_process.php" method="post">
             <label for="username">Username:</label>

@@ -1,6 +1,11 @@
 <?php
 session_start(); // Start the session to access session variables
 
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : "none";
+if (isset($_SESSION['date'])){
+    unset($_SESSION['date']);
+}
+
 // Check if there is an error in the session and store it in a local variable
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : false; // Default to false if not set
 unset($_SESSION['error']); // Clear the session error after reading it
