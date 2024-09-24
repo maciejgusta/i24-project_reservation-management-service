@@ -80,6 +80,7 @@ body {
     height: 100%;
     width: 15%;
     border: 1px solid black;
+    font-size: 2.5vmin;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -93,6 +94,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2vmin;
 }
 
 .week_block {
@@ -127,19 +129,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 4vmin;
 }
 
-.back_to_home {
+.settings_block {
     height: 5%;
     width: 100%;
     border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    flex-direction: row;
+    position: relative;
 }
 
 #logo {
+    width: 95%;
     height: 95%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
+.setting_cell {
+    height: 100%;
+    width: 33.3333%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
 }

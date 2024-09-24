@@ -53,7 +53,7 @@
 
         for ($i = 0; $i < 6; $i++){
             $cur_date = $date->format("d-m-Y");
-            $cur_wk = $date->format("D");
+            $cur_wk = $date->format("l");
             echo '<div class="date_cell">'.$cur_date.'<br>('.$cur_wk.')</div>';
             $date->modify("+1 days");
         }
@@ -125,7 +125,16 @@
 
         </div>
 
-        <div class="back_to_home" onclick=window.location.href=\'home.php\'>BACK TO HOMEPAGE</div>
+        <div class="settings_block">
+
+            <div class="setting_cell" onclick="window.location.href=\'settings.php\'">Settings</div>
+
+            <div class="setting_cell" onclick="window.location.href=\'meetings.php\'">Your meetings</div>
+
+            <div class="setting_cell" onclick="window.location.href=\'log_out.php\'">Log out</div>
+
+        </div>
+
         </div>
         ';
 
