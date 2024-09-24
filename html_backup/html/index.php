@@ -17,15 +17,15 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	<div id="log_in_block">
-        <form id="log_in_form" action="login.php" method="post">
-            <label id="username_label" for="username">Username:</label>
-            <input id="username_input" type="text" name="username" required>
-            <label id="password_label" for="password">Password:</label>
-            <input id="password_input" type="password" name="password" required><br>
+<body id="body_form">
+	<div id="login_container">
+        <form id="login_form" action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input id="login_input1" type="text" name="username" required>
+            <label for="password">Password:</label>
+            <input id="login_input2" type="password" name="password" required><br>
             <?php
                 if ($error == true){
                     echo "<p id=\"invalid_credentials\">Invalid username or password!</p>";
