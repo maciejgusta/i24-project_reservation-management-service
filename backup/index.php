@@ -17,24 +17,28 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body id="body_form">
-	<div id="login_container">
-        <form id="login_form" action="login.php" method="post">
-            <label for="username">Username:</label>
-            <input id="login_input1" type="text" name="username" required>
-            <label for="password">Password:</label>
-            <input id="login_input2" type="password" name="password" required><br>
+<body>
+	<div id="log_in_block">
+        <form id="log_in_form" action="login.php" method="post">
+            <label class="label" for="username">Username:</label>
+            <input class="input" type="text" name="username" required>
+            <label class="label" for="password">Password:</label>
+            <input class="input" type="password" name="password" required>
+            
+            <div id="credentials_block">
             <?php
                 if ($error == true){
-                    echo "<p id=\"invalid_credentials\">Invalid username or password!</p>";
+                    echo '<div id="credentials_div">Invalid username or password!</div>';
                 }
             ?>
-            <button type="submit" name="login">Log in</button>
+            </div>
+            
+            <button id="log_in_button" type="submit" name="login">Log in</button>
         </form>
         <form id="sign_up_form" style="margin-top: 10px" action="sign_up.php" method="post">
-            <button type="submit" name="sign_up">Sign up</button>
+            <button id="sign_up_button" type="submit" name="sign_up">Sign up</button>
         </form>
     </div>
 </body>
