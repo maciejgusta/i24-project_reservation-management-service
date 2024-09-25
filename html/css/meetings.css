@@ -44,7 +44,7 @@ body {
     position: relative;
     border: 1px solid black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .meeting_cell {
@@ -78,7 +78,7 @@ body {
 
 .past_meetings_block {
     height: 100%;
-    width: 45%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -86,7 +86,7 @@ body {
 
 .upcoming_meetings_block {
     height: 100%;
-    width: %;
+    width: 60%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
