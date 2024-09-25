@@ -10,13 +10,10 @@
     $dbname = "jadzia";
     $db = new mysqli($servername, $dbusername, $password, $dbname);
 
-    $upcoming = $db->query('select * from visits where id_user=1 
-    and ((visit_date>=CURDATE() 
-    and visit_time>=CURTIME() + interval "2:00:00" hour_second) or (visit_date>CURDATE()));');
-    $past = $db->query('select * from visits where id_user=1 
-    and ((visit_date<=CURDATE() 
-    and visit_time<CURTIME() + interval "2:00:00" hour_second) or (visit_date<CURDATE()));');
+    $upcoming = $db->query('select * from visits join services on visits.id_service=services.id_service where id_user="'.$id_user.'" and ((visit_date=CURDATE() and (visit_time + interval service_duration hour_second)>=(CURTIME() + interval "02:00:00" hour_second)) or (visit_date>CURDATE()));');
+    $past = $db->query('select * from visits join services on visits.id_service=services.id_service where id_user="'.$id_user.'" and ((visit_date=CURDATE() and (visit_time + interval service_duration hour_second)>=(CURTIME() + interval "02:00:00" hour_second)) or (visit_date>CURDATE()));');
     print_r($upcoming);
+    print_r($past);
 ?>
 
 <!DOCTYPE html>
