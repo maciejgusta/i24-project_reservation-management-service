@@ -130,7 +130,7 @@
 
             <div class="setting_cell" onclick="window.location.href=\'settings.php\'">Settings</div>
 
-            <div class="setting_cell" onclick="window.location.href=\'meetings.php\'">Your meetings</div>
+            <div class="setting_cell" id="my_meetings" onclick="window.location.href=\'meetings.php\'">My meetings</div>
 
             <div class="setting_cell" onclick="window.location.href=\'log_out.php\'">Log out</div>
 

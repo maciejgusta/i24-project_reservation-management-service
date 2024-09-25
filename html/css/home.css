@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     height: 98vh;
     display: flex;
@@ -9,7 +13,6 @@ body {
 .calendar_block {
     height: 90%;
     width: 90%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -18,7 +21,6 @@ body {
 .date_block {
     height: 10%;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     position: relative;
 }
@@ -26,7 +28,6 @@ body {
 .time_block {
     height: 90%;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     position: relative;
 }
@@ -34,26 +35,31 @@ body {
 .hour_block {
     width: 10%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     position: relative;
+    border: 1px solid black;
 }
 
 .day_block {
     width: 15%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     position: relative;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
 }
 
 .line {
     width: 100%;
     height: 0;
-    border: 1px dotted black;
+    border: 1px dashed black;
     position: absolute;
+    opacity: 20%;
 }
 
 #l10 {top: 10%} #l20 {top: 20%} #l30 {top: 30%}
@@ -70,21 +76,25 @@ body {
 .logo_cell {
     width: 10%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .date_cell {
     height: 100%;
     width: 15%;
-    border: 1px solid black;
     font-size: 2.5vmin;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+
 }
 
 .event_cell {
@@ -95,50 +105,64 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2vmin;
+    z-index: 10;
+    border-radius: 1vmin;
+    border: 1px solid #007FFF;
 }
 
 .week_block {
     width: 100%;
     height: 5%;
-    border: 1px solid black;
     position: relative;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    border-top: 1px solid lightblue;
+    border-left: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+    border-top-left-radius: 3vmin;
+    border-top-right-radius: 3vmin;
+    background-color: #007FFF;
+    color: white;
 }
 
 .outer_week {
     width: 20%;
     height: 100%;
-    border: 1px solid black;
     position: relative;
-    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 4vh;
+
 }
 
 .inner_week {
     width: 60%;
     height: 100%;
-    border: 1px solid black;
     position: relative;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 4vmin;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
 }
 
 .settings_block {
     height: 5%;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     position: relative;
+    border-bottom: 1px solid lightblue;
+    border-left: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+    border-bottom-left-radius: 3vmin;
+    border-bottom-right-radius: 3vmin;
+    background-color: #007FFF;
+    color: white;
 }
 
 #logo {
@@ -151,10 +175,14 @@ body {
 .setting_cell {
     height: 100%;
     width: 33.3333%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3vmin;
     cursor: pointer;
+}
+
+#my_meetings {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 }
