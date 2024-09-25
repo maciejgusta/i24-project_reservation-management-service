@@ -13,6 +13,8 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <link rel="stylesheet" href="css/sign_up.css">
 </head>
 <body id="body_form">
+<div id="back" onclick="window.location.href='index.php'">Return</div>
+
     <div id="sign_up_block">
         <form id="sign_up_form" action="sign_up_process.php" method="post">
             <label class="label" for="username">Username:</label>
