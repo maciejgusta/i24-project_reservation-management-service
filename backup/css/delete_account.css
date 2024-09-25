@@ -10,8 +10,11 @@ body {
     position: absolute;
     top: 10vh;
     align-items: center;
-    font-size: 5vh;
+    font-size: 7vmin;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #back{
@@ -19,7 +22,7 @@ body {
     top: 10vh;    /* Odległość od góry ustawiona procentowo */
     left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vw;
+    font-size: 2vmin;
     color: white;
     background-color: #007FFF;
     border-radius: 2vmin;
@@ -31,6 +34,10 @@ body {
 }   
 #back:hover{
     background-color: green;
+
+}
+#back:active{
+    background-color: red;
 
 }
 
@@ -64,6 +71,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    text-align: center;
     font-size: 5vmin;
     padding: 3vmin;
 }

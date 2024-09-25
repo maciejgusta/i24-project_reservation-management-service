@@ -32,10 +32,10 @@ if (isset($_POST['delete'])){
     if (isset($_SESSION['error'])){
         unset($_SESSION['error']);
     }
-    echo "<script>alert(\"Konto zostało usunięte\")</script>";
-        sleep(3);
-        header("Location: index.php");
-        exit();
+    
+    $_SESSION['account_delete'] = "Konto zostało usunięte";
+    header("Location: index.php");
+    exit();
     } 
     else {
         $_SESSION['error'] = true;

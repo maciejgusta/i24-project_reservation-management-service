@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,19 +7,15 @@
     <link rel="stylesheet" href="css/settings.css">
 </head>
 <body>
-    <div class="main_block">
+    <div id="back" onclick="window.location.href='home.php'">Return</div>
 
-        <div class="header_block">Settings</div>
-        
-        <div class="setting_block">
-
-            <div class="setting_info">Delete my account</div>
-            <div class="setting_options">
-                <div id="delete_account_button" onclick="window.location.href='delete_account.php'">DELETE</div>
-            </div>
-
-        </div>
-
+    <div id="title">Settings</div>
+    <div class="main_container">
+        <div class="box" onclick="window.location.href='change_password.php'">Change Password</div>
+        <div class="box" onclick="window.location.href='delete_account.php'">Delete Account</div>  
     </div>
+
+    
+    
 </body>
 </html>

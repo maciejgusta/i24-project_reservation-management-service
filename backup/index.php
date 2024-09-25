@@ -1,6 +1,13 @@
 <?php
 session_start(); // Start the session to access session variables
 
+if (isset($_SESSION['account_delete'])) {
+    echo "<script>alert('" . $_SESSION['account_delete'] . "');</script>";
+    // Opcjonalnie wyczyść zmienną sesji po wyświetleniu alertu
+    unset($_SESSION['account_delete']);
+}
+
+
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "none";
 if (isset($_SESSION['date'])){
     unset($_SESSION['date']);
