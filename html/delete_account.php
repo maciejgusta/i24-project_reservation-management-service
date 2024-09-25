@@ -1,6 +1,7 @@
 <?php
     session_start();
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
+    $error = (isset($_SESSION['error']) ? $_SESSION['error'] : "none");
     $db_servername = "localhost";
     $db_username = "admin";
     $db_password = "admin";
@@ -24,7 +25,7 @@
         <form id="del_acc_form" action="delete_acc.php" method="post">
             <label class="label" for="password">
                 <?php
-                    echo 'Enter ' . $_SESSION['username'] . ' password:';
+                    echo 'Enter ' . $_SESSION['username'] . '\'s password:';
                 ?>
                 </label>
             <input class="input" type="password" name="password" required>
@@ -42,16 +43,3 @@
     </div>
 </body>
 </html>
-
-
-<?php
-    // $db->query("delete from users where id_user=\"$id_user\";");
-    if (isset($_SESSION['date'])){
-        unset($_SESSION['date']);
-    }
-    if (isset($_SESSION['error'])){
-        unset($_SESSION['error']);
-    }
-    // header("Location: index.php");
-    exit();
-?>
