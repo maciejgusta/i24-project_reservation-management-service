@@ -27,6 +27,7 @@
             return $visit['service_name'].' | '.$visit['service_price'].'$ | '.substr($visit['visit_date'], 8, 2).'-'.substr($visit['visit_date'], 5, 2).'-'.substr($visit['visit_date'], 0, 4).' | '.$visit['visit_time'].' - '.add_times($visit['visit_time'], $visit['service_duration']);
         }
         return "";
+
     }
 
 ?>
@@ -48,13 +49,13 @@
 
             <div class="subheader_block">Upcoming meetings</div>
             
-            <div class="meeting_cell">
+            <div class="meeting_cell" style="border: none;">
 
                 <div class="meeting_info">
                     <?php echo next_meeting($upcoming) ?>
                 </div>
 
-                <div class="meeting_options"></div>
+                <div class="meeting_options">CANCEL</div>
 
             </div>
 
@@ -64,7 +65,7 @@
                     <?php echo next_meeting($upcoming) ?>
                 </div>
 
-                <div class="meeting_options"></div>
+                
 
             </div>
 
@@ -100,7 +101,7 @@
 
             <div class="subheader_block">Past meetings</div>
 
-            <div class="meeting_cell">
+            <div class="meeting_cell" style="border: none;">
 
                 <div class="meeting_info">
                     <?php echo next_meeting($past) ?>
@@ -151,6 +152,8 @@
             </div>
 
         </div>
+
+        <div class="return_to_home_page_block" onclick="window.location.href='home.php'">Return to Home</div>
 
     </div>
 </body>

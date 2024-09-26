@@ -43,7 +43,7 @@ body {
 }
 
 .meetings_block {
-    height: 85%;
+    height: 82.5%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -61,10 +61,10 @@ body {
     height: 9%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    border: 1px dotted black;
+    border-top: 2px dashed black;
 }
 
 .meeting_info {
@@ -78,18 +78,39 @@ body {
 }
 
 .meeting_options {
-    height: 80%;
-    width: 30%;
-    border: 3px solid #007FFF;
+    height: 70%;
+    width: 15%;
+    border: 3px solid #B2BEB5;
+    background-color: #B2BEB5;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3vmin;
+    color: white;
+    font-size: 3vmin;
+    font-weight: bold;
 }
 
 .return_to_home_page_block {
-    height: 5%;
+    height: 7.5%;
     width: 100%;
     border: 3px solid #007FFF;
-    
+    background-color: #007FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 4vmin;
+    cursor: pointer;
+    border-bottom-left-radius: 2.5vmin;
+    border-bottom-right-radius: 2.5vmin;
+}
+
+.return_to_home_page_block:hover {
+    background-color: green;
+}
+
+.return_to_home_page_block:active {
+    background-color: red;
 }
