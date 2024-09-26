@@ -89,6 +89,20 @@ body {
     color: white;
     font-size: 3vmin;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.meeting_options:hover {
+    background-color: green;
+}
+
+.meeting_options:active {
+    background-color: red;
+}
+
+.meeting_layout {
+    height: 100%;
+    width: 5%;
 }
 
 .return_to_home_page_block {

@@ -2,6 +2,7 @@
     session_start();
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
+
     $current_date = new DateTime();
 
     $servername = "localhost";
@@ -22,11 +23,14 @@
         return substr('00'.$h, -2).':'.substr('00'.$m, -2).':'.substr('00'.$s, -2);
     }
 
-    function next_meeting($visits){
+    function next_meeting($visits, $action = true, $border=true){
         if ($visits->num_rows>0 && $visit = $visits->fetch_assoc()){
-            return $visit['service_name'].' | '.$visit['service_price'].'$ | '.substr($visit['visit_date'], 8, 2).'-'.substr($visit['visit_date'], 5, 2).'-'.substr($visit['visit_date'], 0, 4).' | '.$visit['visit_time'].' - '.add_times($visit['visit_time'], $visit['service_duration']);
+            $cancel_url = 'cancel_meeting.php?id_visit='. $visit['id_visit'];
+            return '<div class="meeting_cell"'.($border ? '': ' style="border: none"').'"><div class="meeting_layout"></div><div class="meeting_info">'.$visit['service_name'].' | '.$visit['service_price'].'$ | '.substr($visit['visit_date'], 8, 2).'-'.substr($visit['visit_date'], 5, 2).'-'.substr($visit['visit_date'], 0, 4).' | '.$visit['visit_time'].' - '.add_times($visit['visit_time'], $visit['service_duration']).'</div>'.($action ? '<div class="meeting_layout"></div><div class="meeting_options" onclick="window.location.href=\''.$cancel_url.'\'">CANCEL</div>' : '').'<div class="meeting_layout"></div></div>';
+        } else {
+
         }
-        return "";
+        return '<div class="meeting_cell"'.($border ? '': ' style="border: none"').'><div class="meeting_layout"></div><div class="meeting_info"></div>'.($action ? '<div class="meeting_layout"></div><div class="meeting_options" style="font-size: 2.5vmin" onclick="window.location.href=\'schedule_meeting.php\'">SCHEDULE</div>' : '').'<div class="meeting_layout"></div></div>';
 
     }
 
@@ -39,6 +43,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetings</title>
     <link rel="stylesheet" href="css/meetings.css">
+    <script>
+        window.onload = function() {
+            <?php
+                if (isset($_SESSION['alert'])){
+                    echo 'alert("'.$_SESSION['alert'].'");';
+                }
+                unset($_SESSION['alert']);
+            ?>
+        }
+    </script>
 </head>
 <body>
     <div class="main_block">
@@ -49,107 +63,27 @@
 
             <div class="subheader_block">Upcoming meetings</div>
             
-            <div class="meeting_cell" style="border: none;">
+            <?php echo next_meeting($upcoming, true, false) ?>
 
-                <div class="meeting_info">
-                    <?php echo next_meeting($upcoming) ?>
-                </div>
+            <?php echo next_meeting($upcoming) ?>
 
-                <div class="meeting_options">CANCEL</div>
+            <?php echo next_meeting($upcoming) ?>
 
-            </div>
+            <?php echo next_meeting($upcoming) ?>
 
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($upcoming) ?>
-                </div>
-
-                
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($upcoming) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($upcoming) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($upcoming) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
+            <?php echo next_meeting($upcoming) ?>
 
             <div class="subheader_block">Past meetings</div>
 
-            <div class="meeting_cell" style="border: none;">
+            <?php echo next_meeting($past, false, false) ?>
 
-                <div class="meeting_info">
-                    <?php echo next_meeting($past) ?>
-                </div>
+            <?php echo next_meeting($past, false) ?>
 
-                <div class="meeting_options"></div>
+            <?php echo next_meeting($past, false) ?>
 
-            </div>
+            <?php echo next_meeting($past, false) ?>
 
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($past) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($past) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($past) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
-
-            <div class="meeting_cell">
-
-                <div class="meeting_info">
-                    <?php echo next_meeting($past) ?>
-                </div>
-
-                <div class="meeting_options"></div>
-
-            </div>
+            <?php echo next_meeting($past, false) ?>
 
         </div>
 
