@@ -19,40 +19,44 @@
 </head>
 <body>
     <div id="back" onclick="window.location.href='settings.php'">Return</div>
-    <div id="title">Change Password</div>
+    <div id="title"> 
+        <?php
+            echo 'Change ' . $_SESSION['username'] . '\'s password:';
+        ?>
+    </div>
 
     <div id="change_password_block">
-        <form id="change_password_form" action="change_password_script.php" method="post">
+        <form id="change_password_form" action="change_password_process.php" method="post">
             <label class="label" for="password">
                 <?php
-                    echo 'Enter ' . $_SESSION['username'] . '\'s password:';
+                    echo 'Enter old password:';
                 ?>
                 </label>
-            <input class="input" type="password" name="password" required>
+            <input class="input" type="password" name="old_password" required>
 
             <label class="label" for="password">
                 <?php
-                    echo 'Enter new ' . $_SESSION['username'] . '\'s password:';
+                    echo 'Enter new password:';
                 ?>
                 </label>
             <input class="input" type="password" name="new_password" required>
 
             <label class="label" for="password">
                 <?php
-                    echo 'Confirm new ' . $_SESSION['username'] . '\'s password:';
+                    echo 'Confirm new password:';
                 ?>
                 </label>
             <input class="input" type="password" name="new_password_repeat" required>
             
             <div id="credentials_block">
             <?php
-                if ($error == true){
-                    echo '<div id="credentials_div">Invalid password!</div>';
-                }
+                if ($error){
+                    echo "<div id=\"credentials_div\">$error</div>";
+                }  
             ?>
             </div>
             
-            <button id="change_password_button" type="submit" name="change" method="post">Change Password</button>
+            <button id="change_password_button" type="submit" name="change_password" method="post">Change Password</button>
         </form>
     </div>
 

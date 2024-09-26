@@ -20,7 +20,7 @@ if (isset($_POST['delete'])){
         die("Connection failed" . $db->connect_error);
     }
 
-    $sql = "select * from users where username=\"$username\" and password=\"$password\";";
+    $sql = "select * from users where id_user=\"$id_user\" and username=\"$username\" and password=\"$password\";";
     $result = $db->query($sql);
     
         if ($result->num_rows > 0){
