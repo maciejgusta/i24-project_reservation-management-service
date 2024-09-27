@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "auto push"
+git commit -m "server push"
 git push origin master
