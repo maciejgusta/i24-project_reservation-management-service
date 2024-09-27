@@ -58,13 +58,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 4.5vmin;
     border-radius: 3vmin;
     background-color: #007FFF;
     color: white;
     cursor: pointer;
     border: none;
     margin-top: 1vh;
+    font-weight: bold;
 }
 
 #schedule_button:hover {
@@ -76,8 +77,8 @@ body {
 }
 
 
-#credentials_block {
-    height: 10%;
+#information_block {
+    height: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,17 +86,60 @@ body {
     position: relative;
 }
 
-#credentials_div {
+#information_div {
     height: 80%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2.2vmin;
+    font-size: 1.7vmin;
     text-align: center;
-    opacity: 1; /* Initially fully visible */
+    opacity: 0; /* Initially fully visible */
     animation: fadeOut 10s forwards; /* Trigger the fade-out animation */
     border-radius: 2vmin;
     background-color: red;
+    text-align: center;
+}
+
+#information_div:hover {
+    opacity: 0; /* Fade to invisible */
+    visibility: hidden; /* Hide the div completely after fade */
+}
+
+/* Keyframes for the fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Start fully visible */
+        visibility: visible;
+    }
+    100% {
+        opacity: 0; /* Fade to invisible */
+        visibility: hidden; /* Disappear completely after fade */
+    }
+}
+
+
+#back{
+    position: absolute;
+    top: 10vh;    /* Odległość od góry ustawiona procentowo */
+    left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 2vmin;
+    color: white;
+    background-color: #007FFF;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}   
+#back:hover{
+    background-color: green;
+
+}
+#back:active{
+    background-color: red;
+
 }

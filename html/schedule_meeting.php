@@ -9,6 +9,7 @@
     $db = new mysqli($db_servername, $db_username, $db_password, $db_name);
 
     $services = $db->query('select * from services');
+
 ?>  
 
 <!DOCTYPE html>
@@ -20,6 +21,8 @@
     <link rel="stylesheet" href="css/schedule_meeting.css">
 </head>
 <body>
+    <div id="back" onclick="window.location.href='meetings.php'">Return</div>
+
 	<div id="schedule_block">
         <form id="schedule_form" action="schedule_meeting_backend.php" method="post">
             
@@ -38,9 +41,17 @@
             <label class="label" for="time">Time:</label>
             <input class="input" type="time" name="time" required>
                    
-            <div id="credentials_block">
+            <div id="information_block">
             <?php
-                echo '<div id="credentials_div">PAST DATE, PAST TIME ERROR TODO</div>';
+                if (isset($_SESSION['error'])){
+                    echo '<div id="information_div">'.$_SESSION['error'].'</div>';
+                    unset($_SESSION['error']);
+                }
+                if (isset($_SESSION['meeting'])){
+                    echo '<div id="information_div" style="background-color: #32CD32;">Meeting scheduled successfully!</div>';
+                    unset($_SESSION['meeting']);
+                }
+                
             ?>
             </div>
 
