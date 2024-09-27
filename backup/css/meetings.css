@@ -9,11 +9,10 @@ body {
 
 .main_block {
     height: 95%;
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 1px solid black;
 }
 
 .header_block {
@@ -23,7 +22,12 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 6vmin;
-    border: 1px solid black;
+    border: 3px solid #007FFF;
+    background-color: #007FFF;
+    color: white;
+    border-top-left-radius: 2vmin;
+    border-top-right-radius: 2vmin;
+    
 }
 
 .subheader_block {
@@ -33,64 +37,94 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 3vmin;
-    border: 1px solid black;
+    border: 3px solid #007FFF;
+    background-color: #87CEFA;
+    color: white;
 }
 
 .meetings_block {
-    height: 90%;
+    height: 82.5%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
+    border-left: 3px solid #007FFF;
+    border-right: 3px solid #007FFF;
+
 }
 
 .meeting_cell {
     width: 100%;
     height: 9%;
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
+    border-top: 2px dashed black;
 }
 
 .meeting_info {
     height: 80%;
     width: 70%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2.5vmin;
+    text-align: center;
 }
 
 .meeting_options {
-    height: 80%;
-    width: 20%;
-    border: 1px solid black;
+    height: 70%;
+    width: 15%;
+    border: 3px solid #B2BEB5;
+    background-color: #B2BEB5;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 3vmin;
+    color: white;
+    font-size: 3vmin;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.past_meetings_block {
+.meeting_options:hover {
+    background-color: green;
+}
+
+.meeting_options:active {
+    background-color: red;
+}
+
+.meeting_layout {
     height: 100%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+    width: 5%;
 }
 
-.upcoming_meetings_block {
-    height: 100%;
-    width: 60%;
+.return_to_home_page_block {
+    height: 7.5%;
+    width: 100%;
+    border: 3px solid #007FFF;
+    background-color: #007FFF;
     display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 4vmin;
+    cursor: pointer;
+    border-bottom-left-radius: 2.5vmin;
+    border-bottom-right-radius: 2.5vmin;
 }
 
+.return_to_home_page_block:hover {
+    background-color: green;
+}
 
+.return_to_home_page_block:active {
+    background-color: red;
+}

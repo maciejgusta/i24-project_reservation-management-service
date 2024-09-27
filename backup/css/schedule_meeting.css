@@ -6,6 +6,120 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#schedule_block {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 2vmin;
+    border: 3px solid #007FFF;
+}
+
+#schedule_form {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin: 0;
+}
+
+.label {
+    height: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5vmin;
+
+}
+
+.input {
+    height: 12%;
+    width: 100%;
+    font-size: 4vmin;
+    border-radius: 2vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+#schedule_button {
+    height: 14%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5vmin;
+    border-radius: 3vmin;
+    background-color: #007FFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 1vh;
+    font-weight: bold;
+}
+
+#schedule_button:hover {
+    background-color: green;
+}
+
+#schedule_button:active {
+    background-color: red;
+}
+
+
+#information_block {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#information_div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.7vmin;
+    text-align: center;
+    opacity: 0; /* Initially fully visible */
+    animation: fadeOut 10s forwards; /* Trigger the fade-out animation */
+    border-radius: 2vmin;
+    background-color: red;
+    text-align: center;
+}
+
+#information_div:hover {
+    opacity: 0; /* Fade to invisible */
+    visibility: hidden; /* Hide the div completely after fade */
+}
+
+/* Keyframes for the fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Start fully visible */
+        visibility: visible;
+    }
+    100% {
+        opacity: 0; /* Fade to invisible */
+        visibility: hidden; /* Disappear completely after fade */
+    }
+}
+
+
 #back{
     position: absolute;
     top: 10vh;    /* Odległość od góry ustawiona procentowo */
@@ -28,111 +142,4 @@ body {
 #back:active{
     background-color: red;
 
-}
-
-#sign_up_block {
-    height: 70%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: aliceblue;
-    border-radius: 2vmin;
-    border: 3px solid #007FFF;
-}
-
-#sign_up_form {
-    height: 95%;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0;
-}
-
-.label {
-    height: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 2.8vmin;
-
-}
-
-.input {
-    height: 7.5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 2.8vmin;
-    border-radius: 1vmin;
-}
-
-#sign_up_button {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vmin;
-    border-radius: 2vmin;
-    background-color: #007FFF;
-    color: white;
-    cursor: pointer;
-    border: none;
-}
-
-#sign_up_button:hover {
-    background-color: green;
-}
-
-#sign_up_button:active {
-    background-color: red;
-}
-
-#credentials_block {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#credentials_div {
-    height: 80%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2vmin;
-    text-align: center;
-    opacity: 1; /* Initially fully visible */
-    animation: fadeOut 10s forwards; /* Trigger the fade-out animation */
-    border-radius: 2vmin;
-    background-color: red;
-}
-
-#credentials_div:hover {
-    opacity: 0; /* Fade to invisible */
-    visibility: hidden; /* Hide the div completely after fade */
-}
-
-/* Keyframes for the fade-out animation */
-@keyframes fadeOut {
-    0% {
-        opacity: 1; /* Start fully visible */
-        visibility: visible;
-    }
-    100% {
-        opacity: 0; /* Fade to invisible */
-        visibility: hidden; /* Disappear completely after fade */
-    }
 }

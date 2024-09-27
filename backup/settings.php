@@ -1,4 +1,14 @@
-`<!DOCTYPE html>
+<?php
+ if (isset($_SESSION['password_change'])) {
+    echo "<script>alert('" . $_SESSION['password_change'] . "');</script>";
+    // Opcjonalnie wyczyść zmienną sesji po wyświetleniu alertu
+    unset($_SESSION['password_change']);
+}
+
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
