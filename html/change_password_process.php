@@ -43,7 +43,9 @@ if (isset($_POST['change_password'])){
         }
         $change = "update users set password=\"$new_password\" where id_user=\"$id_user\" and username=\"$username\" and password=\"$old_password\";";
         $db->query($change);
-        header("Location: change_password.php");
+    $_SESSION['password_change'] = "Hasło zostało zmienione";
+
+        header("Location: settings.php");
         exit();
     }
 

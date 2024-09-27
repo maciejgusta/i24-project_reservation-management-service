@@ -1,11 +1,7 @@
 <?php
 session_start(); // Start the session to access session variables
 
-if (isset($_SESSION['account_delete'])) {
-    echo "<script>alert('" . $_SESSION['account_delete'] . "');</script>";
-    // Opcjonalnie wyczyść zmienną sesji po wyświetleniu alertu
-    unset($_SESSION['account_delete']);
-}
+
 
 
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "none";
@@ -48,5 +44,12 @@ unset($_SESSION['error']); // Clear the session error after reading it
             <button id="sign_up_button" type="submit" name="sign_up">Sign up</button>
         </form>
     </div>
+    <?php
+        if (isset($_SESSION['account_delete'])) {
+            echo "<script>alert('" . $_SESSION['account_delete'] . "');</script>";
+            // Opcjonalnie wyczyść zmienną sesji po wyświetleniu alertu
+            unset($_SESSION['account_delete']);
+        }
+    ?>
 </body>
 </html>
