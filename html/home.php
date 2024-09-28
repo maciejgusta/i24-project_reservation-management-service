@@ -36,6 +36,7 @@
         return (((int)substr($value, 0, 2))+((int)substr($value, 3, 2)/60)+((int)substr($value, 6, 2)/3600))*10;
     }
 
+    unset($_SESSION['return']);
 ?>
 
 <!DOCTYPE html>
@@ -145,7 +146,7 @@
                 while ($windowend <= $curvisit['start_time']){
                     $top = gettop($windowstart);
                     $height = getheight($windowsize);
-                    $dir = 'schedule_meeting.php?date='.$curday.'&time='.$windowstart.'&return=home.php';
+                    $dir = 'schedule_meeting.php?date='.$curday.'&time='.substr($windowstart,0,5).'&return=home.php';
                     echo '<div class="schedule_meeting" style="top: '.$top.'%; height: '.$height.'%;" onclick="window.location.href=\''.$dir.'\'">'.$windowstart.' - '.$windowend.'</div>';
                     $windowstart = add_times($windowstart, $windowsize);
                     $windowend = add_times($windowend, $windowsize);
@@ -160,7 +161,7 @@
             while ($windowend <= "18:00:00"){
                 $top = gettop($windowstart);
                 $height = getheight($windowsize);
-                $dir = 'schedule_meeting.php?date='.$curday.'&time='.$windowstart.'&return=home.php';
+                $dir = 'schedule_meeting.php?date='.$curday.'&time='.substr($windowstart,0,5).'&return=home.php';
                 echo '<div class="schedule_meeting" style="top: '.$top.'%; height: '.$height.'%;" onclick="window.location.href=\''.$dir.'\'">'.$windowstart.' - '.$windowend.'</div>';
                 $windowstart = add_times($windowstart, $windowsize);
                 $windowend = add_times($windowend, $windowsize);

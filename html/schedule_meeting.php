@@ -20,9 +20,8 @@
     unset($_GET['date']);
     $default_time = isset($_GET['time']) ? $_GET['time'] : false;
     unset($_GET['time']);
-    $return_page = isset($_GET['return']) ? $_GET['return'] : "meetings.php";
+    $_SESSION['return'] = isset($_GET['return']) ? $_GET['return'] : (isset($_SESSION['return']) ? $_SESSION['return'] : "meetings.php");
     unset($_GET['return']);
-
 ?>  
 
 <!DOCTYPE html>
@@ -34,7 +33,7 @@
     <link rel="stylesheet" href="css/schedule_meeting.css">
 </head>
 <body>
-    <div id="back" onclick="window.location.href='<?php echo $return_page; ?>'">Return</div>
+    <div id="back" onclick="window.location.href='<?php echo $_SESSION['return']; ?>'">Return</div>
 
 	<div id="schedule_block">
         <form id="schedule_form" action="schedule_meeting_backend.php" method="post">
