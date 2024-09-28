@@ -199,6 +199,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.4vmin;
 }
 
 .schedule_meeting:hover {
