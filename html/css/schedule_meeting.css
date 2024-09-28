@@ -95,7 +95,7 @@ body {
     color: white;
     font-size: 1.7vmin;
     text-align: center;
-    opacity: 0; /* Initially fully visible */
+    opacity: 0%; /* Initially fully visible */
     animation: fadeOut 10s forwards; /* Trigger the fade-out animation */
     border-radius: 2vmin;
     background-color: red;
@@ -118,6 +118,7 @@ body {
         visibility: hidden; /* Disappear completely after fade */
     }
 }
+
 
 
 #back{
