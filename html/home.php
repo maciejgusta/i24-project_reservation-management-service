@@ -40,14 +40,41 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="dark-mode">
 <head>
+<script>
+        // Sprawdź lokalne ustawienia i dodaj klasę "dark-mode" przed załadowaniem strony
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+<div id="theme_button" onclick="toggleDarkMode()">Change theme</div>
+
+<script>
+    function toggleDarkMode() {
+        const html = document.documentElement; // <html> element
+        html.classList.toggle('dark-mode');
+        // Zapisz wybór motywu do localStorage, aby zapamiętać go po odświeżeniu strony
+        if (html.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Ustaw motyw na podstawie zapisanych preferencji
+    window.onload = function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    }
+</script>
     <?php
         $ws = $date->format("d-m-Y");
         $we = $date->modify("+5 days")->format("d-m-Y");
