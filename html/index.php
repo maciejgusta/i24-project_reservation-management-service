@@ -15,7 +15,7 @@ unset($_SESSION['error']); // Clear the session error after reading it
 ?>
  
 <!DOCTYPE html>
-<html id="html_form" lang="en">
+<html id="dark-mode" lang="en">
 <head>
 <script>
         // Sprawdź lokalne ustawienia i dodaj klasę "dark-mode" przed załadowaniem strony
@@ -29,24 +29,24 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<button onclick="toggleDarkMode()">Zmień motyw</button>
+<div id="theme_button" onclick="toggleDarkMode()">Zmień motyw</div>
 
 <script>
     function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle('dark-mode');
-        // Zapisz wybór do localStorage
-        if (body.classList.contains('dark-mode')) {
+        const html = document.documentElement; // <html> element
+        html.classList.toggle('dark-mode');
+        // Zapisz wybór motywu do localStorage, aby zapamiętać go po odświeżeniu strony
+        if (html.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
         } else {
             localStorage.setItem('theme', 'light');
         }
     }
 
-    // Sprawdź motyw przy ładowaniu strony
+    // Ustaw motyw na podstawie zapisanych preferencji
     window.onload = function() {
         if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
+            document.documentElement.classList.add('dark-mode');
         }
     }
 </script>
