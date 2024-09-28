@@ -16,6 +16,13 @@
 
     $services = $db->query('select * from services');
 
+    $default_date = isset($_GET['date']) ? $_GET['date'] : false;
+    unset($_GET['date']);
+    $default_time = isset($_GET['time']) ? $_GET['time'] : false;
+    unset($_GET['time']);
+    $return_page = isset($_GET['return']) ? $_GET['return'] : "meetings.php";
+    unset($_GET['return']);
+
 ?>  
 
 <!DOCTYPE html>
@@ -27,7 +34,7 @@
     <link rel="stylesheet" href="css/schedule_meeting.css">
 </head>
 <body>
-    <div id="back" onclick="window.location.href='meetings.php'">Return</div>
+    <div id="back" onclick="window.location.href='<?php echo $return_page; ?>'">Return</div>
 
 	<div id="schedule_block">
         <form id="schedule_form" action="schedule_meeting_backend.php" method="post">
@@ -42,10 +49,10 @@
             </select>
 
             <label class="label" for="date">Date:</label>
-            <input class="input" type="date" name="date" required>
+            <input class="input" type="date" name="date" <?php if ($default_date) echo 'value="'.$default_date.'"' ?> required>
 
             <label class="label" for="time">Time:</label>
-            <input class="input" type="time" name="time" required>
+            <input class="input" type="time" name="time" <?php if ($default_time) echo 'value="'.$default_time.'"' ?>required>
                    
             <div id="information_block">
             <?php
