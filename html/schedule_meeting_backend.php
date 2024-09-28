@@ -1,5 +1,10 @@
 <?php
 
+if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+    header("Location: index.php");
+    exit();
+} 
+
     function add_times($x, $y){
         $s = (int)substr($x, 6, 2) + (int)substr($y, 6, 2);
         $m = (int)substr($x, 3, 2) + (int)substr($y, 3, 2) + (int)($s/60);

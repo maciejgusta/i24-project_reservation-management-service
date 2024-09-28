@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        header("Location: index.php");
+        exit();
+    } 
+
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
     $error = (isset($_SESSION['error']) ? $_SESSION['error'] : "none");
     $db_servername = "localhost";

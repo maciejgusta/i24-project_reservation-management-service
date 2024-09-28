@@ -1,6 +1,11 @@
 <?php
     session_start();
 
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        header("Location: index.php");
+        exit();
+    } 
+
     $db_servername = "localhost";
     $db_username = "admin";
     $db_password = "admin";

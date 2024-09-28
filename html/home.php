@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        header("Location: index.php");
+        exit();
+    } 
+
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
     if (isset($_SESSION['date'])){
