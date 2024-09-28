@@ -29,9 +29,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    
-}   
+    cursor: pointer;    
+} 
+  
 #back:hover{
     background-color: green;
 
