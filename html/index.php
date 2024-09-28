@@ -17,12 +17,39 @@ unset($_SESSION['error']); // Clear the session error after reading it
 <!DOCTYPE html>
 <html id="html_form" lang="en">
 <head>
+<script>
+        // Sprawdź lokalne ustawienia i dodaj klasę "dark-mode" przed załadowaniem strony
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<button onclick="toggleDarkMode()">Zmień motyw</button>
+
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+        // Zapisz wybór do localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Sprawdź motyw przy ładowaniu strony
+    window.onload = function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    }
+</script>
 	<div id="log_in_block">
         <form id="log_in_form" action="login.php" method="post">
             <label class="label" for="username">Username:</label>
