@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        session_unset();
+        header("Location: index.php");
+        exit();
+    } 
+
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
     if (isset($_SESSION['date'])){
@@ -11,6 +18,25 @@
         $date->modify($chg);
         $_SESSION['date'] = $date;
     }
+
+    function add_times($x, $y){
+        $s = (int)substr($x, 6, 2) + (int)substr($y, 6, 2);
+        $m = (int)substr($x, 3, 2) + (int)substr($y, 3, 2) + (int)($s/60);
+        $s %= 60;
+        $h = (int)substr($x, 0, 2) + (int)substr($y, 0, 2) + (int)($m/60);
+        $m %= 60;
+        return substr('00'.$h, -2).':'.substr('00'.$m, -2).':'.substr('00'.$s, -2);
+    }
+
+    function gettop($value){
+        return (((int)substr($value, 0, 2))+((int)substr($value, 3, 2)/60)+((int)substr($value, 6, 2)/3600)-8)*10;
+    }
+
+    function getheight($value){
+        return (((int)substr($value, 0, 2))+((int)substr($value, 3, 2)/60)+((int)substr($value, 6, 2)/3600))*10;
+    }
+
+    unset($_SESSION['return']);
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +77,8 @@
             <div class="logo_cell"><img src="logo.png" alt="LOGO" id="logo"></div>
         ';
 
+        //date cell update
+
         for ($i = 0; $i < 6; $i++){
             $cur_date = $date->format("d-m-Y");
             $cur_wk = $date->format("l");
@@ -77,19 +105,22 @@
                 <div class="hour_cell">17:00</div>
             </div>
         ';
+
+        //meetings update
+
         for ($i = 0; $i < 6; $i++){
             echo '<div class="day_block">';
             $curday = $date->format("Y-m-d");
-            $sql = "select * from visits where id_user=$id_user and visit_date=\"$curday\"";
-            $result = $db->query($sql);
+            $sql = "select * from visits where id_user=$id_user and visit_date=\"$curday\";";
+            $visits = $db->query($sql);
             $nuvisits = $db->query('select * from visits where not id_user="'.$id_user.'" and visit_date="'.$curday.'";');
 
-            if ($result->num_rows > 0){
-                while ($visit = $result->fetch_assoc()){
+            if ($visits->num_rows > 0){
+                while ($visit = $visits->fetch_assoc()){
                     $service_time = ($visit['visit_time']);
-                    $top = (((int)substr($service_time, 0, 2))+((int)substr($service_time, 3, 2)/60)+((int)substr($service_time, 6, 2)/3600)-8)*10;
+                    $top = gettop($service_time);
                     $service_duration = $db->query('select service_duration from services where id_service="'.$visit["id_service"].'";')->fetch_assoc()['service_duration'];
-                    $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
+                    $height = getheight($service_duration);
                     $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
                     echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%;">'.$service["service_name"].' '.$service["service_price"].'$</div>';
                 }
@@ -98,14 +129,44 @@
             if ($nuvisits->num_rows > 0){
                 while ($visit = $nuvisits->fetch_assoc()){
                     $service_time = ($visit['visit_time']);
-                    $top = (((int)substr($service_time, 0, 2))+((int)substr($service_time, 3, 2)/60)+((int)substr($service_time, 6, 2)/3600)-8)*10;
+                    $top = gettop($service_time);
                     $service_duration = $db->query('select service_duration from services where id_service="'.$visit["id_service"].'";')->fetch_assoc()['service_duration'];
-                    $height = (((int)substr($service_duration, 0, 2))+((int)substr($service_duration, 3, 2)/60)+((int)substr($service_duration, 6, 2)/3600))*10;
+                    $height = getheight($service_duration);
                     $service = $db->query('select * from services where id_service="'.$visit["id_service"].'";')->fetch_assoc();
-                    //echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">'.$service["service_name"].' '.$service["service_price"].'$</div>';
                     echo '<div class="event_cell" style="top: '.$top.'%; height: '.$height.'%; background-color: red">Barber busy</div>';
                 }   
             }
+
+            $sql = 'select visit_time as start_time, addtime(visit_time, service_duration) as end_time from visits join services on visits.id_service=services.id_service where visit_date="'.$curday.'" order by visit_time;';
+            $allv = $db->query($sql);
+            $windowstart = "08:00:00";
+            $windowsize = "00:30:00";
+            $windowend = add_times($windowstart, $windowsize);
+            while ($allv->num_rows > 0 && $curvisit = $allv->fetch_assoc()){
+                while ($windowend <= $curvisit['start_time']){
+                    $top = gettop($windowstart);
+                    $height = getheight($windowsize);
+                    $dir = 'schedule_meeting.php?date='.$curday.'&time='.substr($windowstart,0,5).'&return=home.php';
+                    echo '<div class="schedule_meeting" style="top: '.$top.'%; height: '.$height.'%;" onclick="window.location.href=\''.$dir.'\'">'.$windowstart.' - '.$windowend.'</div>';
+                    $windowstart = add_times($windowstart, $windowsize);
+                    $windowend = add_times($windowend, $windowsize);
+                }
+                while ($windowstart < $curvisit['end_time']){
+                    $windowstart = add_times($windowstart, $windowsize);
+                    $windowend = add_times($windowend, $windowsize);
+                }
+
+            }
+
+            while ($windowend <= "18:00:00"){
+                $top = gettop($windowstart);
+                $height = getheight($windowsize);
+                $dir = 'schedule_meeting.php?date='.$curday.'&time='.substr($windowstart,0,5).'&return=home.php';
+                echo '<div class="schedule_meeting" style="top: '.$top.'%; height: '.$height.'%;" onclick="window.location.href=\''.$dir.'\'">'.$windowstart.' - '.$windowend.'</div>';
+                $windowstart = add_times($windowstart, $windowsize);
+                $windowend = add_times($windowend, $windowsize);
+            }
+
             echo '</div>';
 
             $date->modify("+1 days");

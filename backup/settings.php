@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+    session_unset();
+    header("Location: index.php");
+    exit();
+} 
+
  if (isset($_SESSION['password_change'])) {
     echo "<script>alert('" . $_SESSION['password_change'] . "');</script>";
     // Opcjonalnie wyczyść zmienną sesji po wyświetleniu alertu

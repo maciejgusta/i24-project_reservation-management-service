@@ -1,5 +1,13 @@
 <?php
 
+    session_start();
+
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        session_unset();
+        header("Location: index.php");
+        exit();
+    } 
+
     function add_times($x, $y){
         $s = (int)substr($x, 6, 2) + (int)substr($y, 6, 2);
         $m = (int)substr($x, 3, 2) + (int)substr($y, 3, 2) + (int)($s/60);
@@ -10,7 +18,6 @@
     }
 
 
-    session_start();
     if (isset($_POST['schedule'])){
         $id_service = $_POST['service'];
         $date = $_POST['date'];

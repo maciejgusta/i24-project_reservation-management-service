@@ -2,6 +2,12 @@
 
 session_start();
 
+if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+    session_unset();
+    header("Location: index.php");
+    exit();
+} 
+
 if (isset($_POST['delete'])){
     $username = $_SESSION['username'];
     $password = $_POST['password'];

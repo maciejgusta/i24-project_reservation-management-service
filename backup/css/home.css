@@ -188,3 +188,25 @@ body {
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
+
+.schedule_meeting {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid lime;
+    opacity: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4vmin;
+}
+
+.schedule_meeting:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.schedule_meeting:active {
+    background-color: lime;
+}

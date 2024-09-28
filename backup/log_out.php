@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if (isset($_SESSION['username'])){
+        unset($_SESSION['username']);
+    }
+    if (isset($_SESSION['id_user'])){
+        unset($_SESSION['id_user']);
+    }
     if (isset($_SESSION['date'])){
         unset($_SESSION['date']);
     }

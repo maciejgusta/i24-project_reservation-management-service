@@ -24,7 +24,6 @@ if (isset($_POST['login'])){
 
     if ($result->num_rows > 0){
         $user = $result->fetch_assoc();
-        $_SESSION['error'] = false;
         $_SESSION['username'] = $username;
         $_SESSION['id_user'] = $db->query("select id_user from users where username=\"$username\" and password=\"$password\";")->fetch_assoc()['id_user'];
         header("Location: home.php");

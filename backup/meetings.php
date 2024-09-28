@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if (!(isset($_SESSION['username']) && isset($_SESSION['id_user']))) {
+        session_unset();
+        header("Location: index.php");
+        exit();
+    } 
+
     $username = (isset($_SESSION['username']) ? $_SESSION['username'] : "none");
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
 
@@ -33,7 +40,7 @@
         return '<div class="meeting_cell"'.($border ? '': ' style="border: none"').'><div class="meeting_layout"></div><div class="meeting_info"></div>'.($action ? '<div class="meeting_layout"></div><div class="meeting_options" style="font-size: 2.5vmin" onclick="window.location.href=\'schedule_meeting.php\'">SCHEDULE</div>' : '').'<div class="meeting_layout"></div></div>';
 
     }
-
+    unset($_SESSION['return']);
 ?>
 
 <!DOCTYPE html>
