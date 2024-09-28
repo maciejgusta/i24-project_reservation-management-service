@@ -29,7 +29,7 @@ unset($_SESSION['error']); // Clear the session error after reading it
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div id="theme_button" onclick="toggleDarkMode()">Zmień motyw</div>
+<div id="theme_button" onclick="toggleDarkMode()">Change theme</div>
 
 <script>
     function toggleDarkMode() {

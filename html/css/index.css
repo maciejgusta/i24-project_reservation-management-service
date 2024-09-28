@@ -39,7 +39,7 @@ html.dark-mode #log_in_block {
     position: relative;
     background-color: #212121;
     border-radius: 2vmin;
-    border: 3px solid #C0C0AE;
+    border: 3px solid #F5F5DC;
 }
 
 #log_in_form {
@@ -112,7 +112,7 @@ html.dark-mode #log_in_button {
     align-items: center;
     font-size: 3vmin;
     border-radius: 2vmin;
-    background-color: #C0C0AE;
+    background-color: #F5F5DC;
     color: #212121;
     cursor: pointer;
     border: none;
@@ -125,6 +125,10 @@ html.dark-mode #log_in_button {
 #log_in_button:active {
     background-color: red;
 }
+html.dark-mode #log_in_button:hover {
+    background-color: #C0C0AE;
+}
+
 
 #sign_up_form {
     height: 15%;
@@ -159,7 +163,7 @@ html.dark-mode #sign_up_button {
     align-items: center;
     font-size: 3vmin;
     border-radius: 2vmin;
-    background-color: #C0C0AE;
+    background-color: #F5F5DC;
     color: #212121;
     cursor: pointer;
     border: none;
@@ -167,6 +171,10 @@ html.dark-mode #sign_up_button {
 
 #sign_up_button:hover {
     background-color: green;
+}
+
+html.dark-mode #sign_up_button:hover {
+    background-color: #C0C0AE;
 }
 
 #sign_up_button:active {
@@ -244,7 +252,7 @@ html.dark-mode #theme_button{
     padding: 1vh 1vw; 
     font-size: 2vmin;
     color: #212121;
-    background-color: #C0C0AE;
+    background-color: #F5F5DC;
     border-radius: 2vmin;
     flex-direction: column;
     justify-content: center;
@@ -252,11 +260,7 @@ html.dark-mode #theme_button{
     cursor: pointer;
     
 } 
-#theme_button:hover{
-    background-color: green;
-
-}
-#theme_button:active{
-    background-color: red;
+html.dark-mode #theme_button:hover{
+    background-color: #C0C0AE;
 
 }
