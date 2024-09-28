@@ -11,6 +11,16 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2F2F2D;
+}
+
 .calendar_block {
     height: 95%;
     width: 95%;
@@ -53,6 +63,8 @@ body {
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
+    background-color: white;
+
 }
 
 .line {
@@ -73,6 +85,8 @@ body {
     position: relative;
     text-align: right;
     font-size: 2vmin;
+    background-color: white;
+
 }
 
 .logo_cell {
@@ -84,6 +98,8 @@ body {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
+    background-color: white;
+
 }
 
 .date_cell {
@@ -96,6 +112,7 @@ body {
     align-items: center;
     border-right: 1px solid black;
     border-top: 1px solid black;
+    background-color: white;
 
 }
 
@@ -112,6 +129,7 @@ body {
     border: 1px solid #007FFF;
 }
 
+
 .week_block {
     width: 100%;
     height: 5%;
@@ -125,6 +143,21 @@ body {
     border-top-right-radius: 3vmin;
     background-color: #007FFF;
     color: white;
+}
+
+html.dark-mode .week_block {
+    width: 100%;
+    height: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #212121;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+    border-top-left-radius: 3vmin;
+    border-top-right-radius: 3vmin;
+    background-color: #F5F5DC;
+    color: #212121;
 }
 
 .outer_week {
@@ -152,19 +185,32 @@ body {
 
 }
 
+html.dark-mode .inner_week {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmin;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+
+}
+
 .settings_block {
     height: 5%;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
-    border-bottom: 1px solid lightblue;
-    border-left: 1px solid lightblue;
-    border-right: 1px solid lightblue;
+    border-bottom: 1px solid #212121;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
     border-bottom-left-radius: 3vmin;
     border-bottom-right-radius: 3vmin;
-    background-color: #007FFF;
-    color: white;
+    background-color: #F5F5DC;
+    color: #212121;
 }
 
 #logo {
@@ -187,6 +233,11 @@ body {
 #my_meetings {
     border-left: 1px solid white;
     border-right: 1px solid white;
+}
+
+html.dark-mode #my_meetings {
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
 }
 
 .schedule_meeting {
