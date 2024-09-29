@@ -18,11 +18,15 @@
     }
 
 
+
     if (isset($_POST['schedule'])){
         $id_service = $_POST['service'];
         $date = $_POST['date'];
         $start = $_POST['time'].':00';
         $id_user = $_SESSION['id_user'];
+
+        $weekday = new DateTime($date);
+        $weekday = $weekday->format('l');
 
         $db_servername = "localhost";
         $db_username = "admin";
@@ -41,6 +45,12 @@
 
         if ($date < $curdate || ($date == $curdate && $start < $curtime)){
             $_SESSION['error'] = "You cannot schedule a meeting in the past!";
+            header("Location: schedule_meeting.php");
+            exit();
+        }
+
+        if ($weekday == 'Sunday'){
+            $_SESSION['error'] = "You cannot schedule a meeting on Sunday!";
             header("Location: schedule_meeting.php");
             exit();
         }
