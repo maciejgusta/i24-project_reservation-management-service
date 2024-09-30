@@ -19,6 +19,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete my account</title>

@@ -42,11 +42,11 @@
 <!DOCTYPE html>
 <html lang="en" id="dark-mode">
 <head>
-<script>
-        // Sprawdź lokalne ustawienia i dodaj klasę "dark-mode" przed załadowaniem strony
+    <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-mode');
         }
+        
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,6 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<div id="theme_button" onclick="toggleDarkMode()">Change theme</div>
 
 <script>
     function toggleDarkMode() {

@@ -204,15 +204,24 @@ html.dark-mode .inner_week {
     display: flex;
     flex-direction: row;
     position: relative;
+<<<<<<< HEAD
     border-bottom: 1px solid lightblue;
     border-left: 1px solid lightblue;
     border-right: 1px solid lightblue;
+=======
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+>>>>>>> 288141f4d2585cd3e02b71ec39e13544f981157c
     border-bottom-left-radius: 3vmin;
     border-bottom-right-radius: 3vmin;
     background-color: #007FFF;
     color: white;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 288141f4d2585cd3e02b71ec39e13544f981157c
 html.dark-mode .settings_block {
     height: 5%;
     width: 100%;
@@ -275,4 +284,39 @@ html.dark-mode #my_meetings {
 
 .schedule_meeting:active {
     background-color: lime;
+}
+
+#theme_button{
+    position: absolute;
+    bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
+    right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 2vmin;
+    color: white;
+    background-color: #007FFF;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}  
+html.dark-mode #theme_button{
+    position: absolute;
+    bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
+    right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 2vmin;
+    color: #212121;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+html.dark-mode #theme_button:hover{
+    background-color: #C0C0AE;
+
 }
