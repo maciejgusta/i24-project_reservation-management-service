@@ -5,11 +5,22 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F2F2D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #title{
     position: absolute;
-    top: 10vh;
+    top: 5vmin  ;
     align-items: center;
     font-size: 7vmin;
     font-weight: bold;
@@ -18,14 +29,47 @@ body {
     align-items: center;
 }
 
+html.dark-mode #title{
+    position: absolute;
+    top: 5vmin  ;
+    align-items: center;
+    font-size: 7vmin;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F6F6DF;
+}
+
+
 .main_container {
     height: 60vh;
-    width: 70vw;
+    width: 50vw;
     display: flex;
+    position: relative;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    
+    border: solid 3px black ;
+    padding-bottom: 5vmin;
+    border-radius: 2vmin;
+
+}
+html.dark-mode .main_container {
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    background-color: #212121;
+    align-items: center;
+    flex-direction: column;
+    border: solid 3px #F5F5DC ;
+    padding-bottom: 5vmin;
+    border-radius: 2vmin;
+
 }
 
 .box{
@@ -40,12 +84,32 @@ body {
     background-color: #007FFF;
     border-radius: 2vmin;
     font-size: 5vmin;
-    padding: 3vmin;
+    padding: 3vmin;  
     color: white;
+    cursor: pointer;
+}
+html.dark-mode .box{
+    display: flex;
+    height: 40%;
+    width: 70%;
+    align-items: center;        /* Wyrównanie wertykalne */
+    justify-content: center;    /* Wyrównanie horyzontalne */
+    text-align: center;
+    margin: 5vh;
+    position: relative;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    font-size: 5vmin;
+    padding: 3vmin;  
+    color: #212121;
     cursor: pointer;
 }
 .box:hover{
     background-color: green;
+
+}
+html.dark-mode .box:hover{
+    background-color: #C0C0AE;
 
 }
 .box:active{
@@ -67,8 +131,28 @@ body {
     cursor: pointer;
     
 }   
+html.dark-mode #back{
+    position: absolute;
+    top: 10vh;    /* Odległość od góry ustawiona procentowo */
+    left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 2vmin;
+    color: #212121;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+
 #back:hover{
     background-color: green;
+
+}
+html.dark-mode #back:hover{
+    background-color: #C0C0AE;
 
 }
 #back:active{
