@@ -25,7 +25,7 @@
 ?>  
 
 <!DOCTYPE html>
-<html id="html_form" lang="en">
+<html id="dark-mode" lang="en">
 <head>
 <script>
         if (localStorage.getItem('theme') === 'dark') {

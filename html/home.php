@@ -100,7 +100,7 @@
 
         <div class="date_block">
 
-            <div class="logo_cell"><img src="logo.png" alt="LOGO" id="logo"></div>
+            <a href="logo.png" class="logo_cell"><img src="logo.png" alt="LOGO" id="logo"></a>
         ';
 
         //date cell update
