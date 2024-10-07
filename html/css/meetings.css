@@ -5,6 +5,16 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2F2F2D;
 }
 
 .main_block {
@@ -30,6 +40,21 @@ body {
     
 }
 
+html.dark-mode .header_block {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vmin;
+    border: 3px solid #212121;
+    background-color: #F5F5DC;
+    color: #212121;
+    border-top-left-radius: 2vmin;
+    border-top-right-radius: 2vmin;
+    
+}
+
 .subheader_block {
     height: 10%;
     width: 100%;
@@ -40,6 +65,18 @@ body {
     border: 3px solid #007FFF;
     background-color: #87CEFA;
     color: white;
+}
+
+html.dark-mode .subheader_block {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    border: 3px solid #212121;
+    background-color: #F9F9E7;
+    color: #212121;
 }
 
 .meetings_block {
@@ -56,6 +93,20 @@ body {
 
 }
 
+html.dark-mode .meetings_block {
+    height: 82.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid #212121;
+    border-right: 3px solid #212121;
+
+}
+
 .meeting_cell {
     width: 100%;
     height: 9%;
@@ -65,6 +116,18 @@ body {
     align-items: center;
     position: relative;
     border-top: 2px dashed black;
+}
+
+html.dark-mode .meeting_cell {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border-top: 2px dashed #2F2F2D;
+    background-color: white;
 }
 
 .meeting_info {

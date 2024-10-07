@@ -44,7 +44,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="dark-mode">
 <head>
 <script>
         if (localStorage.getItem('theme') === 'dark') {
