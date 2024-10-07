@@ -92,9 +92,9 @@
 
         <div class="week_block">
 
-            <div class="outer_week" onclick="window.location.href=\'lw.php\'"> < </div>
+            <div class="outer_week_backward" onclick="window.location.href=\'lw.php\'"> < </div>
             <div class="inner_week">'.$ws.' - '.$we.'</div>
-            <div class="outer_week" onclick="window.location.href=\'rw.php\'"> > </div>
+            <div class="outer_week_forward" onclick="window.location.href=\'rw.php\'"> > </div>
         
         </div>
 
@@ -215,11 +215,11 @@
 
         <div class="settings_block">
 
-            <div class="setting_cell" onclick="window.location.href=\'settings.php\'">Settings</div>
+            <div class="setting_cell_left" onclick="window.location.href=\'settings.php\'">Settings</div>
 
             <div class="setting_cell" id="my_meetings" onclick="window.location.href=\'meetings.php\'">My meetings</div>
 
-            <div class="setting_cell" onclick="window.location.href=\'log_out.php\'">Log out</div>
+            <div class="setting_cell_right" onclick="window.location.href=\'log_out.php\'">Log out</div>
 
         </div>
 

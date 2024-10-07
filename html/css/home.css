@@ -160,7 +160,7 @@ html.dark-mode .week_block {
     color: #212121;
 }
 
-.outer_week {
+.outer_week_backward {
     width: 20%;
     height: 100%;
     position: relative;
@@ -169,6 +169,41 @@ html.dark-mode .week_block {
     justify-content: center;
     align-items: center;
     font-size: 4vh;
+}
+html.dark-mode .outer_week_backward:hover{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    background-color: #C0C0AE;
+    border-top-left-radius: 3vmin;
+
+}
+.outer_week_forward {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+}
+html.dark-mode .outer_week_forward:hover{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    background-color: #C0C0AE;
+    border-top-right-radius: 3vmin;
 
 }
 
@@ -198,6 +233,8 @@ html.dark-mode .inner_week {
 
 }
 
+
+
 .settings_block {
     height: 5%;
     width: 100%;
@@ -226,6 +263,11 @@ html.dark-mode .settings_block {
     background-color: #F5F5DC;
     color: #212121;
 }
+html.dark-mode html.dark-mode .settings_block:hover {
+    border-bottom-left-radius: 3vmin;
+    border-bottom-right-radius: 3vmin;
+    
+}
 
 #logo {
     width: 95%;
@@ -242,6 +284,58 @@ html.dark-mode .settings_block {
     align-items: center;
     font-size: 3vmin;
     cursor: pointer;
+}
+html.dark-mode .setting_cell:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+}
+.setting_cell_left {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+}
+html.dark-mode .setting_cell_left:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+    border-bottom-left-radius: 3vmin;
+
+}
+.setting_cell_right {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+}
+html.dark-mode .setting_cell_right:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+    border-bottom-right-radius: 3vmin;
+
 }
 
 #my_meetings {
