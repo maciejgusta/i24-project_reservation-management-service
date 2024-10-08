@@ -34,6 +34,7 @@ body {
     background-color: aliceblue;
     border-radius: 2vmin;
     border: 3px solid #007FFF;
+    padding: 1vmin;
 }
 html.dark-mode #log_in_block {
     height: 50%;
