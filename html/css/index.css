@@ -3,7 +3,10 @@ html.dark-mode body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     background-color: #2F2F2D;
 }
 
@@ -12,7 +15,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     background-color: white;
 }
 
@@ -197,7 +203,7 @@ html.dark-mode #sign_up_button:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 3vmin;
+    font-size: 2vmin;
     text-align: center;
     opacity: 1;
     /* Initially fully visible */
@@ -207,7 +213,31 @@ html.dark-mode #sign_up_button:hover {
     background-color: red;
 }
 
+#verification_div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vmin;
+    text-align: center;
+    opacity: 1;
+    /* Initially fully visible */
+    animation: fadeOut 10s forwards;
+    /* Trigger the fade-out animation */
+    border-radius: 2vmin;
+    background-color: green;
+}
+
 #credentials_div:hover {
+    opacity: 0;
+    /* Fade to invisible */
+    visibility: hidden;
+    /* Hide the div completely after fade */
+}
+
+#verification_div:hover {
     opacity: 0;
     /* Fade to invisible */
     visibility: hidden;

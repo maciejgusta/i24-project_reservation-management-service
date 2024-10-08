@@ -11,12 +11,17 @@ if (isset($_SESSION['date'])){
 
 // Check if there is an error in the session and store it in a local variable
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : false; // Default to false if not set
+$verified = isset($_SESSION['verified']) ? $_SESSION['verified'] : false;
+unset($_SESSION['verified']);
 unset($_SESSION['error']); // Clear the session error after reading it
 ?>
  
 <!DOCTYPE html>
 <html id="dark-mode" lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
 <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-mode');
@@ -58,8 +63,10 @@ unset($_SESSION['error']); // Clear the session error after reading it
             
             <div id="credentials_block">
             <?php
-                if ($error == true){
-                    echo '<div id="credentials_div">Invalid username or password!</div>';
+                if ($error){
+                    echo '<div id="credentials_div">'.$error.'</div>';
+                } else if ($verified){
+                    echo '<div id="verification_div">Account has been verified!</div>';
                 }
             ?>
             </div>

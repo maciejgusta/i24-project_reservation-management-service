@@ -4,7 +4,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     background-color: white;
 }
 
@@ -15,12 +18,15 @@ html.dark-mode body {
     justify-content: center;
     align-items: center;
     background-color: #2F2F2D;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #title{
     position: absolute;
-    top: 5vmin  ;
+    top: 5%;
     align-items: center;
     font-size: 7vmin;
     font-weight: bold;
@@ -31,7 +37,7 @@ html.dark-mode body {
 
 html.dark-mode #title{
     position: absolute;
-    top: 5vmin  ;
+    top: 5%;
     align-items: center;
     font-size: 7vmin;
     font-weight: bold;
@@ -43,64 +49,64 @@ html.dark-mode #title{
 
 
 .main_container {
-    height: 60vh;
-    width: 50vw;
+    height: 60%;
+    width: 50%;
+    box-sizing: border-box;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
-    flex-direction: column;
     border: solid 3px black ;
-    padding-bottom: 5vmin;
     border-radius: 2vmin;
 
 }
 html.dark-mode .main_container {
-    height: 60vh;
-    width: 50vw;
+    height: 60%;
+    width: 50%;
+    box-sizing: border-box;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: space-around;
     text-align: center;
-    background-color: #212121;
     align-items: center;
-    flex-direction: column;
-    border: solid 3px #F5F5DC ;
-    padding-bottom: 5vmin;
     border-radius: 2vmin;
-
+    background-color: #212121;
+    border: solid 3px #F5F5DC ;
 }
 
 .box{
     display: flex;
-    height: 40%;
+    height: 25%;
     width: 70%;
     align-items: center;        /* Wyrównanie wertykalne */
     justify-content: center;    /* Wyrównanie horyzontalne */
     text-align: center;
-    margin: 5vh;
     position: relative;
     background-color: #007FFF;
     border-radius: 2vmin;
-    font-size: 5vmin;
-    padding: 3vmin;  
+    font-size: 4vmin;
     color: white;
     cursor: pointer;
 }
 html.dark-mode .box{
     display: flex;
-    height: 40%;
+    height: 25%;
     width: 70%;
     align-items: center;        /* Wyrównanie wertykalne */
     justify-content: center;    /* Wyrównanie horyzontalne */
     text-align: center;
-    margin: 5vh;
     position: relative;
-    background-color: #F5F5DC;
     border-radius: 2vmin;
-    font-size: 5vmin;
-    padding: 3vmin;  
+    font-size: 4vmin;
+    cursor: pointer;
+    background-color: #F5F5DC;
     color: #212121;
     cursor: pointer;
 }
@@ -118,24 +124,25 @@ html.dark-mode .box:hover{
 }
 #back{
     position: absolute;
-    top: 10vh;    /* Odległość od góry ustawiona procentowo */
-    left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
-    padding: 1vh 1vw; 
+    top: 5%;    /* Odległość od góry ustawiona procentowo */
+    left: 5%;   /* Odległość od lewej strony ustawiona procentowo */
     font-size: 2vmin;
     color: white;
     background-color: #007FFF;
     border-radius: 2vmin;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     cursor: pointer;
-    
+    height: 5%;
+    width: 7%;
 }   
 html.dark-mode #back{
     position: absolute;
-    top: 10vh;    /* Odległość od góry ustawiona procentowo */
-    left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
-    padding: 1vh 1vw; 
+    top: 5%;    /* Odległość od góry ustawiona procentowo */
+    left: 5%;   /* Odległość od lewej strony ustawiona procentowo */
     font-size: 2vmin;
     color: #212121;
     background-color: #F5F5DC;
