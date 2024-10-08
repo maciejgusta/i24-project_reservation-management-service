@@ -37,7 +37,7 @@ html.dark-mode body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6vmin;
+    font-size: 5vmin;
     border: 3px solid #007FFF;
     background-color: #007FFF;
     color: white;
@@ -52,7 +52,7 @@ html.dark-mode .header_block {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6vmin;
+    font-size: 5vmin;
     border: 3px solid #212121;
     background-color: #F5F5DC;
     color: #212121;
@@ -67,7 +67,7 @@ html.dark-mode .header_block {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border: 3px solid #007FFF;
     background-color: #87CEFA;
     color: white;
@@ -79,7 +79,7 @@ html.dark-mode .subheader_block {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border: 3px solid #212121;
     background-color: #F9F9E7;
     color: #212121;
@@ -142,7 +142,7 @@ html.dark-mode .meeting_cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5vmin;
+    font-size: 2.2vmin;
     text-align: center;
 }
 
@@ -156,7 +156,7 @@ html.dark-mode .meeting_cell {
     align-items: center;
     border-radius: 3vmin;
     color: white;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     font-weight: bold;
     cursor: pointer;
 }
@@ -171,7 +171,7 @@ html.dark-mode .meeting_options {
     align-items: center;
     border-radius: 3vmin;
     color: #212121;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     font-weight: bold;
     cursor: pointer;
 }
@@ -202,7 +202,7 @@ html.dark-mode .meeting_options:hover {
     align-items: center;
     text-align: center;
     color: white;
-    font-size: 4vmin;
+    font-size: 3.6vmin;
     cursor: pointer;
     border-bottom-left-radius: 2.5vmin;
     border-bottom-right-radius: 2.5vmin;
@@ -218,7 +218,7 @@ html.dark-mode .return_to_home_page_block {
     align-items: center;
     text-align: center;
     color: #212121;
-    font-size: 4vmin;
+    font-size: 3.6vmin;
     cursor: pointer;
     border-bottom-left-radius: 2.5vmin;
     border-bottom-right-radius: 2.5vmin;

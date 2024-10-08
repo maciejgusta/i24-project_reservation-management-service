@@ -90,7 +90,7 @@ html.dark-mode body {
     height: 10%;
     position: relative;
     text-align: right;
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     background-color: white;
 
 }
@@ -111,7 +111,7 @@ html.dark-mode body {
 .date_cell {
     height: 100%;
     width: 15%;
-    font-size: 2.3vmin;
+    font-size: 2vmin;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -129,7 +129,7 @@ html.dark-mode body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     z-index: 10;
     border-radius: 1vmin;
     border: 1px solid #007FFF;
@@ -174,7 +174,7 @@ html.dark-mode .week_block {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3.5vh;
 }
 html.dark-mode .outer_week_backward:hover{
     width: 20%;
@@ -184,7 +184,7 @@ html.dark-mode .outer_week_backward:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3.5vh;
     background-color: #C0C0AE;
     border-top-left-radius: 3vmin;
 
@@ -197,7 +197,7 @@ html.dark-mode .outer_week_backward:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3.5vh;
 }
 html.dark-mode .outer_week_forward:hover{
     width: 20%;
@@ -207,7 +207,7 @@ html.dark-mode .outer_week_forward:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3.5vh;
     background-color: #C0C0AE;
     border-top-right-radius: 3vmin;
 
@@ -220,7 +220,7 @@ html.dark-mode .outer_week_forward:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     border-left: 1px solid white;
     border-right: 1px solid white;
 
@@ -233,7 +233,7 @@ html.dark-mode .inner_week {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     border-left: 1px solid #212121;
     border-right: 1px solid #212121;
 
@@ -288,7 +288,7 @@ html.dark-mode html.dark-mode .settings_block:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
 }
 html.dark-mode .setting_cell:hover {
@@ -297,7 +297,7 @@ html.dark-mode .setting_cell:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
     background-color: #C0C0AE;
 }
@@ -307,7 +307,7 @@ html.dark-mode .setting_cell:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
 }
 html.dark-mode .setting_cell_left:hover {
@@ -316,7 +316,7 @@ html.dark-mode .setting_cell_left:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
     background-color: #C0C0AE;
     border-bottom-left-radius: 3vmin;
@@ -328,7 +328,7 @@ html.dark-mode .setting_cell_left:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
 }
 html.dark-mode .setting_cell_right:hover {
@@ -337,7 +337,7 @@ html.dark-mode .setting_cell_right:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
     background-color: #C0C0AE;
     border-bottom-right-radius: 3vmin;
@@ -364,7 +364,7 @@ html.dark-mode #my_meetings {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.4vmin;
+    font-size: 1.1vmin;
 }
 
 .schedule_meeting:hover {
@@ -381,7 +381,7 @@ html.dark-mode #my_meetings {
     bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
     right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     color: white;
     background-color: #007FFF;
     border-radius: 2vmin;
@@ -396,7 +396,7 @@ html.dark-mode #theme_button{
     bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
     right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     color: #212121;
     background-color: #F5F5DC;
     border-radius: 2vmin;

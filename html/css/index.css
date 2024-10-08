@@ -66,7 +66,7 @@ html.dark-mode #log_in_block {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 4vmin;
 }
 html.dark-mode .label {
     height: 15%;
@@ -74,7 +74,7 @@ html.dark-mode .label {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 4vmin;
     color: #F6F6DF;
 }
 
@@ -84,7 +84,7 @@ html.dark-mode .label {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 4.5vmin;
     border-radius: 2vmin;
 }
 html.dark-mode .input {
@@ -93,7 +93,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 4.5vmin;
     border-radius: 2vmin;
     background-color: #F9F9E7;
 }
@@ -104,7 +104,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #007FFF;
     color: white;
@@ -117,7 +117,7 @@ html.dark-mode #log_in_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #F5F5DC;
     color: #212121;
@@ -155,7 +155,7 @@ html.dark-mode #log_in_button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #007FFF;
     color: white;
@@ -168,7 +168,7 @@ html.dark-mode #sign_up_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #F5F5DC;
     color: #212121;
@@ -256,7 +256,7 @@ html.dark-mode #forgot_password_link:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     text-align: center;
     opacity: 1;
     /* Initially fully visible */
@@ -273,7 +273,7 @@ html.dark-mode #forgot_password_link:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     text-align: center;
     opacity: 1;
     /* Initially fully visible */
@@ -318,7 +318,7 @@ html.dark-mode #forgot_password_link:hover {
     bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
     right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     color: white;
     background-color: #007FFF;
     border-radius: 2vmin;
@@ -333,7 +333,7 @@ html.dark-mode #theme_button{
     bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
     right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     color: #212121;
     background-color: #F5F5DC;
     border-radius: 2vmin;

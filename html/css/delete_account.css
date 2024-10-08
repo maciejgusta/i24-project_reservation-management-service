@@ -25,7 +25,7 @@ html.dark-mode body {
     position: absolute;
     top: 10vh;
     align-items: center;
-    font-size: 6.5vmin;
+    font-size: 3.5vmin;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ html.dark-mode #title{
     position: absolute;
     top: 10vh;
     align-items: center;
-    font-size: 6.5vmin;
+    font-size: 3.5vmin;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -130,7 +130,7 @@ html.dark-mode #del_acc_block {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     padding: 3vmin;
 }
 
@@ -141,7 +141,7 @@ html.dark-mode .label {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     padding: 3vmin;
     color: #F6F6DF;
 }
@@ -152,7 +152,7 @@ html.dark-mode .label {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     border-radius: 2vmin;
 }
 html.dark-mode .input {
@@ -161,7 +161,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     border-radius: 2vmin;
     background-color: #F9F9E7;
 }
@@ -171,7 +171,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #007FFF;
     color: white;
@@ -184,7 +184,7 @@ html.dark-mode #del_acc_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border-radius: 2vmin;
     background-color: #F5F5DC;
     color: #212121;
