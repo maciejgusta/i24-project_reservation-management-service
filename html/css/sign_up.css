@@ -45,6 +45,26 @@ html.dark-mode body {
 
 }
 
+html.dark-mode #back{
+    position: absolute;
+    top: 5%;    /* Odległość od góry ustawiona procentowo */
+    left: 5%;   /* Odległość od lewej strony ustawiona procentowo */
+    font-size: 2vmin;
+    color: #212121;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+
+html.dark-mode #back:hover{
+    background-color: #C0C0AE;
+
+}
+
 #sign_up_block {
     height: 70%;
     width: 50%;
@@ -56,6 +76,18 @@ html.dark-mode body {
     background-color: aliceblue;
     border-radius: 2vmin;
     border: 3px solid #007FFF;
+}
+html.dark-mode #sign_up_block {
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #212121;
+    border-radius: 2vmin;
+    border: 3px solid #F5F5DC;
 }
 
 #sign_up_form {
@@ -79,6 +111,16 @@ html.dark-mode body {
 
 }
 
+html.dark-mode .label {
+    height: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.8vmin;
+    color: #F6F6DF;
+}
+
 .input {
     height: 7.5%;
     width: 100%;
@@ -87,6 +129,17 @@ html.dark-mode body {
     align-items: flex-end;
     font-size: 2.8vmin;
     border-radius: 1vmin;
+}
+
+html.dark-mode .input {
+    height: 7.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.8vmin;
+    border-radius: 1vmin;
+    background-color: #F9F9E7;
 }
 
 #sign_up_button {
@@ -103,8 +156,26 @@ html.dark-mode body {
     border: none;
 }
 
+html.dark-mode #sign_up_button {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    border-radius: 2vmin;
+    background-color: #F5F5DC;
+    color: #212121;
+    cursor: pointer;
+    border: none;
+}
+
 #sign_up_button:hover {
     background-color: green;
+}
+
+html.dark-mode #sign_up_button:hover {
+    background-color: #C0C0AE;
 }
 
 #sign_up_button:active {
