@@ -37,7 +37,7 @@ unset($_SESSION['error']); // Clear the session error after reading it
             <label class="label" for="last_name">Last name:</label>
             <input class="input" type="text" name="last_name" required>
             <label class="label" for="email">E-mail:</label>
-            <input class="input" type="text" name="email" required>
+            <input class="input" type="email" name="email" required>
 
             <div id="credentials_block">
             <?php

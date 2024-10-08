@@ -17,7 +17,7 @@
             $id_user = $result['id_user'];
             $username = $result['username'];
             $db->query('update users set verified=true where id_user="'.$id_user.'";');
-            $_SESSION['verified'] = true;
+            $_SESSION['verified'] = 'Account has been verified!';
             header("Location: index.php");
         } else {
             $_SESSION['error'] = 'Couldn\'t verify email';

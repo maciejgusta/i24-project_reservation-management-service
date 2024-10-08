@@ -189,30 +189,20 @@ html.dark-mode #sign_up_button:hover {
 }
 
 
-
-#forgot_possword_form {
+#forgot_password_div {
     height: 10%;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0;
-    
-}
-
-#forgot_password_link {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2vmin;
     color: #007FFF;
     text-decoration: underline;
-    cursor: pointer;
     border: none;
 }
-html.dark-mode #forgot_password_link {
+html.dark-mode #forgot_password_div {
+    height: 10%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,6 +211,10 @@ html.dark-mode #forgot_password_link {
     text-decoration: underline;
     cursor: pointer;
     border: none;
+}
+
+#forgot_password_link {
+    color: #007FFF;
 }
 
 #forgot_password_button:hover {

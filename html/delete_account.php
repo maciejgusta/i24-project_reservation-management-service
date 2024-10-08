@@ -9,6 +9,7 @@
 
     $id_user = (isset($_SESSION['id_user']) ? $_SESSION['id_user'] : "none");
     $error = (isset($_SESSION['error']) ? $_SESSION['error'] : false);
+    unset($_SESSION['error']);
     $db_servername = "localhost";
     $db_username = "admin";
     $db_password = "admin";
