@@ -69,6 +69,9 @@ unset($_SESSION['error']); // Clear the session error after reading it
         <form id="sign_up_form" style="margin-top: 10px" action="sign_up.php" method="post">
             <button id="sign_up_button" type="submit" name="sign_up">Sign up</button>
         </form>
+        <form id="forgot_possword_form"  action="forgot_password.php" method="post">
+            <div id="forgot_password_link" onclick="window.location.href=\'forgot_password.php\'">Forgot password?</div>
+        </form>
     </div>
     <?php
         if (isset($_SESSION['account_delete'])) {
