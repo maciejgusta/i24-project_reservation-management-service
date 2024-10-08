@@ -1,5 +1,5 @@
 html.dark-mode body {
-    height: 98vh;
+    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ html.dark-mode body {
 }
 
 body {
-    height: 98vh;
+    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
