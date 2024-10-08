@@ -3,7 +3,7 @@
 }
 
 body {
-    height: 88vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@ body {
 }
 
 html.dark-mode body {
-    height: 88vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
