@@ -26,9 +26,9 @@ html.dark-mode body {
 
 #title{
     position: absolute;
-    top: 5%;
+    top: 5.5%;
     align-items: center;
-    font-size: 7vmin;
+    font-size: 3.5vmin;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -37,9 +37,9 @@ html.dark-mode body {
 
 html.dark-mode #title{
     position: absolute;
-    top: 5%;
+    top: 5.5%;
     align-items: center;
-    font-size: 7vmin;
+    font-size: 3.5vmin;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -91,7 +91,7 @@ html.dark-mode .main_container {
     position: relative;
     background-color: #007FFF;
     border-radius: 2vmin;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     color: white;
     cursor: pointer;
 }
@@ -104,7 +104,7 @@ html.dark-mode .box{
     text-align: center;
     position: relative;
     border-radius: 2vmin;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     cursor: pointer;
     background-color: #F5F5DC;
     color: #212121;

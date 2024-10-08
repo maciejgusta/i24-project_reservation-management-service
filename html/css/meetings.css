@@ -156,7 +156,7 @@ html.dark-mode .meeting_cell {
     align-items: center;
     border-radius: 3vmin;
     color: white;
-    font-size: 2.7vmin;
+    font-size: 2vmin;
     font-weight: bold;
     cursor: pointer;
 }
@@ -171,7 +171,7 @@ html.dark-mode .meeting_options {
     align-items: center;
     border-radius: 3vmin;
     color: #212121;
-    font-size: 2.7vmin;
+    font-size: 2vmin;
     font-weight: bold;
     cursor: pointer;
 }
