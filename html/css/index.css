@@ -187,6 +187,58 @@ html.dark-mode #sign_up_button:hover {
     background-color: red;
 }
 
+
+
+#forgot_possword_form {
+    height: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    
+}
+
+#forgot_password_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+    color: #007FFF;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+}
+html.dark-mode #forgot_password_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+    color: #F5F5DC;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+}
+
+#forgot_password_button:hover {
+    background-color: green;
+}
+
+html.dark-mode #forgot_password_link:hover {
+    color: #C0C0AE;
+}
+
+#forgot_password_button:active {
+    background-color: red;
+}
+
+
+
+
+
+
 #credentials_block {
     height: 20%;
     width: 100%;
