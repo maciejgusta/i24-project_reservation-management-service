@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Your Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            height: 98vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .email-container {
+            position: relative;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 3vmin;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+            font-size: 5vmin;
+            margin-bottom: 1vmin;
+        }
+        p {
+            font-size: 2vmin;
+            width: 80%;
+            color: #666666;
+        }
+        .reset-button {
+            width: 50%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 3vmin;
+            font-size: 3vmin;
+        }
+        .reset-button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            font-size: 1.5vmin;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h1>Reset Your Password</h1>
+        <p>We received a request to reset your password. Click the button below to choose a new password.</p>
+        <a href="{{reset_link}}" class="reset-button">Reset Password</a>
+        <p class="footer">If you didn't request this, you can safely ignore this email.</p>
+    </div>
+</body>
+</html>
