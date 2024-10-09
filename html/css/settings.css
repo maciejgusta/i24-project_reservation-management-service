@@ -8,7 +8,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    background-color: #fafbfc;
 }
 
 html.dark-mode body {
@@ -60,7 +60,8 @@ html.dark-mode #title{
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    border: solid 3px black ;
+    background-color: aliceblue;
+    border: solid 3px #052526;
     border-radius: 2vmin;
 
 }
@@ -89,7 +90,7 @@ html.dark-mode .main_container {
     justify-content: center;    /* Wyrównanie horyzontalne */
     text-align: center;
     position: relative;
-    background-color: #007FFF;
+    background-color: #167383;
     border-radius: 2vmin;
     font-size: 3.5vmin;
     color: white;
@@ -111,15 +112,11 @@ html.dark-mode .box{
     cursor: pointer;
 }
 .box:hover{
-    background-color: green;
+    background-color: #0C4E55;
 
 }
 html.dark-mode .box:hover{
     background-color: #C0C0AE;
-
-}
-.box:active{
-    background-color: red;
 
 }
 #back{
@@ -128,7 +125,7 @@ html.dark-mode .box:hover{
     left: 5%;   /* Odległość od lewej strony ustawiona procentowo */
     font-size: 2vmin;
     color: white;
-    background-color: #007FFF;
+    background-color: #167383;
     border-radius: 2vmin;
     display: flex;
     flex-direction: column;
@@ -155,15 +152,11 @@ html.dark-mode #back{
 } 
 
 #back:hover{
-    background-color: green;
+    background-color: #0C4E55;
 
 }
 html.dark-mode #back:hover{
     background-color: #C0C0AE;
-
-}
-#back:active{
-    background-color: red;
 
 }
 
