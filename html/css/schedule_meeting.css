@@ -135,16 +135,13 @@ html.dark-mode #schedule_button {
 }
 
 #schedule_button:hover {
-    background-color: green;
+    background-color: #0C4E55;
 }
 html.dark-mode #schedule_button:hover {
     background-color: #C0C0AE;
 }
 
 
-#schedule_button:active {
-    background-color: red;
-}
 
 
 #information_block {
