@@ -19,7 +19,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    background-color: #FAFBFC;
 }
 
 
@@ -33,7 +33,7 @@ body {
     position: relative;
     background-color: aliceblue;
     border-radius: 2vmin;
-    border: 3px solid #007FFF;
+    border: 3px solid #052526;
     padding: 1vmin;
 }
 html.dark-mode #log_in_block {
@@ -106,7 +106,7 @@ html.dark-mode .input {
     align-items: center;
     font-size: 2.7vmin;
     border-radius: 2vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
     cursor: pointer;
     border: none;
@@ -126,12 +126,9 @@ html.dark-mode #log_in_button {
 }
 
 #log_in_button:hover {
-    background-color: green;
+    background-color: #0C4E55;
 }
 
-#log_in_button:active {
-    background-color: red;
-}
 html.dark-mode #log_in_button:hover {
     background-color: #C0C0AE;
 }
@@ -157,7 +154,7 @@ html.dark-mode #log_in_button:hover {
     align-items: center;
     font-size: 2.7vmin;
     border-radius: 2vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
     cursor: pointer;
     border: none;
@@ -177,16 +174,13 @@ html.dark-mode #sign_up_button {
 }
 
 #sign_up_button:hover {
-    background-color: green;
+    background-color: #0C4E55;
 }
 
 html.dark-mode #sign_up_button:hover {
     background-color: #C0C0AE;
 }
 
-#sign_up_button:active {
-    background-color: red;
-}
 
 
 #forgot_password_div {
@@ -196,7 +190,7 @@ html.dark-mode #sign_up_button:hover {
     justify-content: center;
     align-items: center;
     font-size: 2vmin;
-    color: #007FFF;
+    color: #167383;
     text-decoration: underline;
     border: none;
 }
@@ -214,7 +208,7 @@ html.dark-mode #forgot_password_div {
 }
 
 #forgot_password_link {
-    color: #007FFF;
+    color: #052526;
 }
 
 html.dark-mode #forgot_password_link {

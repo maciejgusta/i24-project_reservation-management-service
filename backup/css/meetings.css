@@ -4,7 +4,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+}
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2F2F2D;
 }
 
 .main_block {
@@ -21,10 +37,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6vmin;
+    font-size: 5vmin;
     border: 3px solid #007FFF;
     background-color: #007FFF;
     color: white;
+    border-top-left-radius: 2vmin;
+    border-top-right-radius: 2vmin;
+    
+}
+
+html.dark-mode .header_block {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    border: 3px solid #212121;
+    background-color: #F5F5DC;
+    color: #212121;
     border-top-left-radius: 2vmin;
     border-top-right-radius: 2vmin;
     
@@ -36,10 +67,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     border: 3px solid #007FFF;
     background-color: #87CEFA;
     color: white;
+}
+
+html.dark-mode .subheader_block {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    border: 3px solid #212121;
+    background-color: #F9F9E7;
+    color: #212121;
 }
 
 .meetings_block {
@@ -56,6 +99,20 @@ body {
 
 }
 
+html.dark-mode .meetings_block {
+    height: 82.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid #212121;
+    border-right: 3px solid #212121;
+
+}
+
 .meeting_cell {
     width: 100%;
     height: 9%;
@@ -67,13 +124,25 @@ body {
     border-top: 2px dashed black;
 }
 
+html.dark-mode .meeting_cell {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border-top: 2px dashed #2F2F2D;
+    background-color: white;
+}
+
 .meeting_info {
     height: 80%;
     width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5vmin;
+    font-size: 2.2vmin;
     text-align: center;
 }
 
@@ -87,13 +156,31 @@ body {
     align-items: center;
     border-radius: 3vmin;
     color: white;
-    font-size: 3vmin;
+    font-size: 2vmin;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+html.dark-mode .meeting_options {
+    height: 70%;
+    width: 15%;
+    border: 3px solid #212121;
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vmin;
+    color: #212121;
+    font-size: 2vmin;
     font-weight: bold;
     cursor: pointer;
 }
 
 .meeting_options:hover {
     background-color: green;
+}
+html.dark-mode .meeting_options:hover {
+    background-color: #C0C0AE;
 }
 
 .meeting_options:active {
@@ -115,7 +202,23 @@ body {
     align-items: center;
     text-align: center;
     color: white;
-    font-size: 4vmin;
+    font-size: 3.6vmin;
+    cursor: pointer;
+    border-bottom-left-radius: 2.5vmin;
+    border-bottom-right-radius: 2.5vmin;
+}
+
+html.dark-mode .return_to_home_page_block {
+    height: 7.5%;
+    width: 100%;
+    border: 3px solid #212121;
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #212121;
+    font-size: 3.6vmin;
     cursor: pointer;
     border-bottom-left-radius: 2.5vmin;
     border-bottom-right-radius: 2.5vmin;
@@ -123,6 +226,9 @@ body {
 
 .return_to_home_page_block:hover {
     background-color: green;
+}
+html.dark-mode .return_to_home_page_block:hover {
+    background-color: #C0C0AE;
 }
 
 .return_to_home_page_block:active {

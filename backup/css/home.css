@@ -8,7 +8,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2F2F2D;
 }
 
 .calendar_block {
@@ -53,6 +69,8 @@ body {
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
+    background-color: white;
+
 }
 
 .line {
@@ -72,7 +90,9 @@ body {
     height: 10%;
     position: relative;
     text-align: right;
-    font-size: 2vmin;
+    font-size: 1.7vmin;
+    background-color: white;
+
 }
 
 .logo_cell {
@@ -84,18 +104,21 @@ body {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
+    background-color: white;
+
 }
 
 .date_cell {
     height: 100%;
     width: 15%;
-    font-size: 2.3vmin;
+    font-size: 2vmin;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     border-right: 1px solid black;
     border-top: 1px solid black;
+    background-color: white;
 
 }
 
@@ -106,11 +129,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     z-index: 10;
     border-radius: 1vmin;
     border: 1px solid #007FFF;
 }
+
 
 .week_block {
     width: 100%;
@@ -127,7 +151,22 @@ body {
     color: white;
 }
 
-.outer_week {
+html.dark-mode .week_block {
+    width: 100%;
+    height: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #212121;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+    border-top-left-radius: 3vmin;
+    border-top-right-radius: 3vmin;
+    background-color: #F5F5DC;
+    color: #212121;
+}
+
+.outer_week_backward {
     width: 20%;
     height: 100%;
     position: relative;
@@ -135,7 +174,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3.5vh;
+}
+html.dark-mode .outer_week_backward:hover{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+    background-color: #C0C0AE;
+    border-top-left-radius: 3vmin;
+
+}
+.outer_week_forward {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+}
+html.dark-mode .outer_week_forward:hover{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+    background-color: #C0C0AE;
+    border-top-right-radius: 3vmin;
 
 }
 
@@ -146,11 +220,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
     border-left: 1px solid white;
     border-right: 1px solid white;
 
 }
+
+html.dark-mode .inner_week {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vmin;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+
+}
+
+
 
 .settings_block {
     height: 5%;
@@ -158,13 +247,32 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    border-bottom: 1px solid lightblue;
-    border-left: 1px solid lightblue;
-    border-right: 1px solid lightblue;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
     border-bottom-left-radius: 3vmin;
     border-bottom-right-radius: 3vmin;
     background-color: #007FFF;
     color: white;
+}
+html.dark-mode .settings_block {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-bottom: 1px solid #212121;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+    border-bottom-left-radius: 3vmin;
+    border-bottom-right-radius: 3vmin;
+    background-color: #F5F5DC;
+    color: #212121;
+}
+html.dark-mode html.dark-mode .settings_block:hover {
+    border-bottom-left-radius: 3vmin;
+    border-bottom-right-radius: 3vmin;
+    
 }
 
 #logo {
@@ -180,13 +288,70 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 2.7vmin;
     cursor: pointer;
+}
+html.dark-mode .setting_cell:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+}
+.setting_cell_left {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    cursor: pointer;
+}
+html.dark-mode .setting_cell_left:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+    border-bottom-left-radius: 3vmin;
+
+}
+.setting_cell_right {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    cursor: pointer;
+}
+html.dark-mode .setting_cell_right:hover {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vmin;
+    cursor: pointer;
+    background-color: #C0C0AE;
+    border-bottom-right-radius: 3vmin;
+
 }
 
 #my_meetings {
     border-left: 1px solid white;
     border-right: 1px solid white;
+}
+
+html.dark-mode #my_meetings {
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
 }
 
 .schedule_meeting {
@@ -199,7 +364,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.4vmin;
+    font-size: 1.1vmin;
 }
 
 .schedule_meeting:hover {
@@ -209,4 +374,39 @@ body {
 
 .schedule_meeting:active {
     background-color: lime;
+}
+
+#theme_button{
+    position: absolute;
+    bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
+    right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 1.7vmin;
+    color: white;
+    background-color: #007FFF;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}  
+html.dark-mode #theme_button{
+    position: absolute;
+    bottom: 10vh;    /* Odległość od góry ustawiona procentowo */
+    right: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 1.7vmin;
+    color: #212121;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+html.dark-mode #theme_button:hover{
+    background-color: #C0C0AE;
+
 }

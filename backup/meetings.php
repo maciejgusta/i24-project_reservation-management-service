@@ -37,15 +37,24 @@
         } else {
 
         }
-        return '<div class="meeting_cell"'.($border ? '': ' style="border: none"').'><div class="meeting_layout"></div><div class="meeting_info"></div>'.($action ? '<div class="meeting_layout"></div><div class="meeting_options" style="font-size: 2.5vmin" onclick="window.location.href=\'schedule_meeting.php\'">SCHEDULE</div>' : '').'<div class="meeting_layout"></div></div>';
+        return '<div class="meeting_cell"'.($border ? '': ' style="border: none"').'><div class="meeting_layout"></div><div class="meeting_info"></div>'.($action ? '<div class="meeting_layout"></div><div class="meeting_options" style="font-size: 2vmin" onclick="window.location.href=\'schedule_meeting.php\'">SCHEDULE</div>' : '').'<div class="meeting_layout"></div></div>';
 
     }
     unset($_SESSION['return']);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="dark-mode">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetings</title>

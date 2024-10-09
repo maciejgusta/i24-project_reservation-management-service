@@ -3,7 +3,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+html.dark-mode body {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F2F2D;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #schedule_block {
@@ -17,6 +32,18 @@ body {
     background-color: aliceblue;
     border-radius: 2vmin;
     border: 3px solid #007FFF;
+}
+html.dark-mode #schedule_block {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #212121;
+    border-radius: 2vmin;
+    border: 3px solid #F5F5DC;
 }
 
 #schedule_form {
@@ -36,14 +63,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4.5vmin;
+    font-size: 3.5vmin;
 
+}
+html.dark-mode .label {
+    height: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vmin;
+    color: #F6F6DF;
 }
 
 .input {
     height: 12%;
     width: 100%;
-    font-size: 4vmin;
+    font-size: 3vmin;
     border-radius: 2vmin;
     display: flex;
     justify-content: center;
@@ -51,6 +87,20 @@ body {
     text-align: center;
     margin-bottom: 1vh;
 }
+html.dark-mode .input {
+    height: 12%;
+    width: 100%;
+    font-size: 3vmin;
+    border-radius: 2vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1vh;
+    background-color: #F9F9E7;
+
+}
+
 
 #schedule_button {
     height: 14%;
@@ -58,7 +108,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4.5vmin;
+    font-size: 3.7vmin;
     border-radius: 3vmin;
     background-color: #007FFF;
     color: white;
@@ -68,9 +118,29 @@ body {
     font-weight: bold;
 }
 
+html.dark-mode #schedule_button {
+    height: 14%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.7vmin;
+    border-radius: 3vmin;
+    background-color: #F5F5DC;
+    color: #212121;
+    cursor: pointer;
+    border: none;
+    margin-top: 1vh;
+    font-weight: bold;
+}
+
 #schedule_button:hover {
     background-color: green;
 }
+html.dark-mode #schedule_button:hover {
+    background-color: #C0C0AE;
+}
+
 
 #schedule_button:active {
     background-color: red;
@@ -93,7 +163,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 1.7vmin;
+    font-size: 1.5vmin;
     text-align: center;
     opacity: 0; /* Initially fully visible */
     animation: fadeOut 10s forwards; /* Trigger the fade-out animation */
@@ -125,7 +195,7 @@ body {
     top: 10vh;    /* Odległość od góry ustawiona procentowo */
     left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
     padding: 1vh 1vw; 
-    font-size: 2vmin;
+    font-size: 1.8vmin;
     color: white;
     background-color: #007FFF;
     border-radius: 2vmin;
@@ -135,8 +205,29 @@ body {
     cursor: pointer;
     
 }   
+
+html.dark-mode #back{
+    position: absolute;
+    top: 10vh;    /* Odległość od góry ustawiona procentowo */
+    left: 10vw;   /* Odległość od lewej strony ustawiona procentowo */
+    padding: 1vh 1vw; 
+    font-size: 1.8vmin;
+    color: #212121;
+    background-color: #F5F5DC;
+    border-radius: 2vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+} 
+
 #back:hover{
     background-color: green;
+
+}
+html.dark-mode #back:hover{
+    background-color: #C0C0AE;
 
 }
 #back:active{

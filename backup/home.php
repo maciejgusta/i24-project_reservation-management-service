@@ -40,14 +40,43 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="dark-mode">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+
+<script>
+    function toggleDarkMode() {
+        const html = document.documentElement; // <html> element
+        html.classList.toggle('dark-mode');
+        // Zapisz wybór motywu do localStorage, aby zapamiętać go po odświeżeniu strony
+        if (html.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Ustaw motyw na podstawie zapisanych preferencji
+    window.onload = function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    }
+</script>
     <?php
         $ws = $date->format("d-m-Y");
         $we = $date->modify("+5 days")->format("d-m-Y");
@@ -66,9 +95,9 @@
 
         <div class="week_block">
 
-            <div class="outer_week" onclick="window.location.href=\'lw.php\'"> < </div>
+            <div class="outer_week_backward" onclick="window.location.href=\'lw.php\'"> < </div>
             <div class="inner_week">'.$ws.' - '.$we.'</div>
-            <div class="outer_week" onclick="window.location.href=\'rw.php\'"> > </div>
+            <div class="outer_week_forward" onclick="window.location.href=\'rw.php\'"> > </div>
         
         </div>
 
@@ -189,11 +218,11 @@
 
         <div class="settings_block">
 
-            <div class="setting_cell" onclick="window.location.href=\'settings.php\'">Settings</div>
+            <div class="setting_cell_left" onclick="window.location.href=\'settings.php\'">Settings</div>
 
             <div class="setting_cell" id="my_meetings" onclick="window.location.href=\'meetings.php\'">My meetings</div>
 
-            <div class="setting_cell" onclick="window.location.href=\'log_out.php\'">Log out</div>
+            <div class="setting_cell_right" onclick="window.location.href=\'log_out.php\'">Log out</div>
 
         </div>
 

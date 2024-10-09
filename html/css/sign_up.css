@@ -7,7 +7,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    background-color: #FAFBFC;
 }
 
 html.dark-mode body {
@@ -28,7 +28,7 @@ html.dark-mode body {
     padding: 1vh 1vw; 
     font-size: 2vmin;
     color: white;
-    background-color: #007FFF;
+    background-color: #052526;
     border-radius: 2vmin;
     flex-direction: column;
     justify-content: center;

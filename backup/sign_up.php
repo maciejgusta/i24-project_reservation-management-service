@@ -7,6 +7,15 @@ unset($_SESSION['error']); // Clear the session error after reading it
 <!DOCTYPE html>
 <html id="html_form" lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
@@ -27,8 +36,8 @@ unset($_SESSION['error']); // Clear the session error after reading it
             <input class="input" type="text" name="first_name" required>
             <label class="label" for="last_name">Last name:</label>
             <input class="input" type="text" name="last_name" required>
-            <label class="label" for="phone_number">Phone number:</label>
-            <input class="input" type="number" name="phone_number" required>
+            <label class="label" for="email">E-mail:</label>
+            <input class="input" type="email" name="email" required>
 
             <div id="credentials_block">
             <?php
