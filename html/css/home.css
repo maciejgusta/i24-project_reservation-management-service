@@ -1,3 +1,10 @@
+html{
+    height: 90vh;
+}
+html.dark-mode html{
+    height: 90vh;
+}
+
 * {
     box-sizing: border-box;
 }
