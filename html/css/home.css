@@ -11,6 +11,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    background-color: #FAFBFC;
     font-style: normal;
 }
 
@@ -125,14 +126,14 @@ html.dark-mode body {
 .event_cell {
     width: 100%;
     position: absolute;
-    background-color: lightblue;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.7vmin;
     z-index: 10;
     border-radius: 1vmin;
-    border: 1px solid #007FFF;
+    border: 1px solid #167383;
 }
 
 
@@ -147,7 +148,7 @@ html.dark-mode body {
     border-right: 1px solid lightblue;
     border-top-left-radius: 3vmin;
     border-top-right-radius: 3vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
 }
 
@@ -252,7 +253,7 @@ html.dark-mode .inner_week {
     border-right: 1px solid white;
     border-bottom-left-radius: 3vmin;
     border-bottom-right-radius: 3vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
 }
 html.dark-mode .settings_block {

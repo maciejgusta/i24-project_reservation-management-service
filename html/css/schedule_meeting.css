@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #FAFBFC;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -31,7 +31,7 @@ html.dark-mode body {
     position: relative;
     background-color: aliceblue;
     border-radius: 2vmin;
-    border: 3px solid #007FFF;
+    border: 3px solid #052526;
 }
 html.dark-mode #schedule_block {
     height: 60%;
@@ -110,7 +110,7 @@ html.dark-mode .input {
     align-items: center;
     font-size: 3.7vmin;
     border-radius: 3vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
     cursor: pointer;
     border: none;
