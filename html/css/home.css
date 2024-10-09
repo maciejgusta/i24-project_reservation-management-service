@@ -1,11 +1,4 @@
-html, body {
-    overflow: hidden;
-    touch-action: none; /* Blokuje gesty scrollowania na urządzeniach dotykowych */
-}
-html.dark-mode html, body {
-    overflow: hidden;
-    touch-action: none; /* Blokuje gesty scrollowania na urządzeniach dotykowych */
-}
+
 
 
 * {
@@ -39,7 +32,7 @@ html.dark-mode body {
 }
 
 .calendar_block {
-    height: 87vh;
+    height: 85vh;
     width: 90vw;
     display: flex;
     flex-direction: column;
