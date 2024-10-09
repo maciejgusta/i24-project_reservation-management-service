@@ -1,9 +1,12 @@
-html{
-    height: 90vh;
+html, body {
+    overflow: hidden;
+    touch-action: none; /* Blokuje gesty scrollowania na urządzeniach dotykowych */
 }
-html.dark-mode html{
-    height: 90vh;
+html.dark-mode html, body {
+    overflow: hidden;
+    touch-action: none; /* Blokuje gesty scrollowania na urządzeniach dotykowych */
 }
+
 
 * {
     box-sizing: border-box;
