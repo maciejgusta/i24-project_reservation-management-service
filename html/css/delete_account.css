@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #FAFBFC;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -50,7 +50,7 @@ html.dark-mode #title{
     padding: 1vh 1vw; 
     font-size: 1.7vmin;
     color: white;
-    background-color: #007FFF;
+    background-color: #167383;
     border-radius: 2vmin;
     flex-direction: column;
     justify-content: center;
@@ -74,15 +74,11 @@ html.dark-mode #back{
 } 
   
 #back:hover{
-    background-color: green;
+    background-color: #0C4E55;
 
 }
 html.dark-mode #back:hover{
     background-color: #C0C0AE;
-
-}
-#back:active{
-    background-color: red;
 
 }
 
@@ -96,7 +92,7 @@ html.dark-mode #back:hover{
     position: relative;
     background-color: aliceblue;
     border-radius: 2vmin;
-    border: 3px solid #007FFF;
+    border: 3px solid #052526;
 }
 
 html.dark-mode #del_acc_block {
@@ -173,7 +169,7 @@ html.dark-mode .input {
     align-items: center;
     font-size: 2.7vmin;
     border-radius: 2vmin;
-    background-color: #007FFF;
+    background-color: #167383;
     color: white;
     cursor: pointer;
     border: none;
@@ -193,15 +189,12 @@ html.dark-mode #del_acc_button {
 }
 
 #del_acc_button:hover {
-    background-color: green;
+    background-color: #0C4E55;
 }
 html.dark-mode #del_acc_button:hover {
     background-color: #C0C0AE;
 }
 
-#del_acc_button:active {
-    background-color: red;
-}
 
 
 

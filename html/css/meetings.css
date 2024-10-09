@@ -8,7 +8,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    background-color: #FAFBFC;
 }
 html.dark-mode body {
     height: 98vh;
@@ -38,8 +38,8 @@ html.dark-mode body {
     justify-content: center;
     align-items: center;
     font-size: 5vmin;
-    border: 3px solid #007FFF;
-    background-color: #007FFF;
+    border: 3px solid #167383;
+    background-color: #167383;
     color: white;
     border-top-left-radius: 2vmin;
     border-top-right-radius: 2vmin;
@@ -68,8 +68,8 @@ html.dark-mode .header_block {
     justify-content: center;
     align-items: center;
     font-size: 2.7vmin;
-    border: 3px solid #007FFF;
-    background-color: #87CEFA;
+    border: 3px solid #4CB9E0;
+    background-color: #4CB9E0;
     color: white;
 }
 
@@ -94,8 +94,8 @@ html.dark-mode .subheader_block {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-left: 3px solid #007FFF;
-    border-right: 3px solid #007FFF;
+    border-left: 3px solid #4CB9E0;
+    border-right: 3px solid #4CB9E0;
 
 }
 
@@ -149,8 +149,7 @@ html.dark-mode .meeting_cell {
 .meeting_options {
     height: 70%;
     width: 15%;
-    border: 3px solid #B2BEB5;
-    background-color: #B2BEB5;
+    background-color: #8B9395;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,14 +176,10 @@ html.dark-mode .meeting_options {
 }
 
 .meeting_options:hover {
-    background-color: green;
+    background-color: #222626;
 }
 html.dark-mode .meeting_options:hover {
     background-color: #C0C0AE;
-}
-
-.meeting_options:active {
-    background-color: red;
 }
 
 .meeting_layout {
@@ -195,8 +190,8 @@ html.dark-mode .meeting_options:hover {
 .return_to_home_page_block {
     height: 7.5%;
     width: 100%;
-    border: 3px solid #007FFF;
-    background-color: #007FFF;
+    border: 3px solid #167383;
+    background-color: #167383;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,12 +220,9 @@ html.dark-mode .return_to_home_page_block {
 }
 
 .return_to_home_page_block:hover {
-    background-color: green;
+    background-color: #0C4E55;
 }
 html.dark-mode .return_to_home_page_block:hover {
     background-color: #C0C0AE;
 }
 
-.return_to_home_page_block:active {
-    background-color: red;
-}
