@@ -40,10 +40,6 @@ html.dark-mode body {
     background-color: green;
 
 }
-#back:active{
-    background-color: red;
-
-}
 
 html.dark-mode #back{
     position: absolute;
@@ -177,10 +173,6 @@ html.dark-mode #sign_up_button {
 
 html.dark-mode #sign_up_button:hover {
     background-color: #C0C0AE;
-}
-
-#sign_up_button:active {
-    background-color: red;
 }
 
 #credentials_block {
