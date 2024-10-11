@@ -79,25 +79,35 @@ html.dark-mode .label {
 .input {
     height: 12%;
     width: 100%;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
+    border-width: 0.1vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 1vh;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 html.dark-mode .input {
     height: 12%;
     width: 100%;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
+    border-width: 0.1vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 1vh;
     background-color: #F9F9E7;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -116,6 +126,10 @@ html.dark-mode .input {
     border: none;
     margin-top: 1vh;
     font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 html.dark-mode #schedule_button {
@@ -132,6 +146,10 @@ html.dark-mode #schedule_button {
     border: none;
     margin-top: 1vh;
     font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #schedule_button:hover {
@@ -200,6 +218,7 @@ html.dark-mode #schedule_button:hover {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-weight: 500;
     
 }   
 
@@ -216,6 +235,7 @@ html.dark-mode #back{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-weight: 500;
     
 } 
 

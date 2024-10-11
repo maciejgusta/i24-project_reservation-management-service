@@ -34,7 +34,7 @@ body {
     background-color: aliceblue;
     border-radius: 2vmin;
     border: 3px solid #052526;
-    padding: 1vmin;
+    padding: 2vmin;
 }
 html.dark-mode #log_in_block {
     height: 45%;
@@ -47,6 +47,7 @@ html.dark-mode #log_in_block {
     background-color: #212121;
     border-radius: 2vmin;
     border: 3px solid #F5F5DC;
+    padding: 2vmin;
 }
 
 #log_in_form {
@@ -84,7 +85,7 @@ html.dark-mode .label {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 4.5vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
 }
 html.dark-mode .input {
@@ -93,7 +94,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 4.5vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
     background-color: #F9F9E7;
 }
@@ -110,6 +111,10 @@ html.dark-mode .input {
     color: white;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 html.dark-mode #log_in_button {
     height: 13.33333%;
@@ -123,6 +128,10 @@ html.dark-mode #log_in_button {
     color: #212121;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #log_in_button:hover {
@@ -158,6 +167,10 @@ html.dark-mode #log_in_button:hover {
     color: white;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 html.dark-mode #sign_up_button {
     height: 66.6666%;
@@ -171,6 +184,10 @@ html.dark-mode #sign_up_button {
     color: #212121;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #sign_up_button:hover {

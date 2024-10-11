@@ -54,7 +54,7 @@ html.dark-mode .header_block {
     align-items: center;
     font-size: 5vmin;
     border: 3px solid #212121;
-    background-color: #F5F5DC;
+    background-color: #cfcfa8;
     color: #212121;
     border-top-left-radius: 2vmin;
     border-top-right-radius: 2vmin;
@@ -163,8 +163,7 @@ html.dark-mode .meeting_cell {
 html.dark-mode .meeting_options {
     height: 70%;
     width: 15%;
-    border: 1px solid #212121;
-    background-color: #F5F5DC;
+    background-color: #cfcfa8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,7 +206,7 @@ html.dark-mode .return_to_home_page_block {
     height: 7.5%;
     width: 100%;
     border: 3px solid #212121;
-    background-color: #F5F5DC;
+    background-color: #cfcfa8;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -258,6 +258,7 @@ html.dark-mode .inner_week {
     border-bottom-right-radius: 3vmin;
     background-color: #167383;
     color: white;
+    font-weight: 500;
 }
 html.dark-mode .settings_block {
     height: 5%;

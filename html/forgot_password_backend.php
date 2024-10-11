@@ -38,8 +38,8 @@
             $recipient = $email;
 
             // Replace smtp_username with your Amazon SES SMTP user name.
-            $usernameSmtp = 'AKIASIVGKZNY6WKAHY4Y';
-            $passwordSmtp = 'BHMZ0k3J8j8Kj5VyferxHj3r63UEITl7g+zWc5370wu+';
+            $usmtp = getenv('AWS_SES_SMTP_USERNAME');
+            $psmtp = getenv('AWS_SES_SMTP_PASSWORD');
 
             // Specify a configuration set. If you do not want to use a configuration
             // set, comment or remove the next line.
@@ -101,8 +101,8 @@
             //Specify the SMTP settings.
             $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
-            $mail->Username   = $usernameSmtp;
-            $mail->Password   = $passwordSmtp;
+            $mail->Username   = $usmtp;
+            $mail->Password   = $psmtp;
             $mail->Host       = $host;
             $mail->Port       = $port;
             $mail->SMTPAuth   = true;

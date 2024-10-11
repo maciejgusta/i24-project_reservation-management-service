@@ -77,7 +77,7 @@ if (isset($_POST['sign_up'])){
         return $url_safe_token;
     }
 
-    $secret_key = 'f93b3f017f51628c260f7abf7a18d25fdf7fc1ed0ce71c8185a1f7af9d8561fe';
+    $secret_key = getenv('SECRET_KEY');
     $token = generateEmailVerificationToken($username, $secret_key);
     $verification_link = 'https://retro-ciecie.pl/email_verification.php?token='.$token.'';
 
@@ -94,8 +94,8 @@ if (isset($_POST['sign_up'])){
     $recipient = $email;
 
     // Replace smtp_username with your Amazon SES SMTP user name.
-    $usernameSmtp = 'AKIASIVGKZNY6WKAHY4Y';
-    $passwordSmtp = 'BHMZ0k3J8j8Kj5VyferxHj3r63UEITl7g+zWc5370wu+';
+    $usmtp = getenv('AWS_SES_SMTP_USERNAME');
+    $psmtp = getenv('AWS_SES_SMTP_PASSWORD');
 
     // Specify a configuration set. If you do not want to use a configuration
     // set, comment or remove the next line.
@@ -206,8 +206,8 @@ if (isset($_POST['sign_up'])){
     // Specify the SMTP settings.
     $mail->isSMTP();
     $mail->setFrom($sender, $senderName);
-    $mail->Username   = $usernameSmtp;
-    $mail->Password   = $passwordSmtp;
+    $mail->Username   = $usmtp;
+    $mail->Password   = $psmtp;
     $mail->Host       = $host;
     $mail->Port       = $port;
     $mail->SMTPAuth   = true;

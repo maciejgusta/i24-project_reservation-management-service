@@ -49,8 +49,8 @@ html.dark-mode #title{
 
 
 .main_container {
-    height: 60%;
-    width: 50%;
+    height: 50%;
+    width: 40%;
     box-sizing: border-box;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -66,8 +66,8 @@ html.dark-mode #title{
 
 }
 html.dark-mode .main_container {
-    height: 60%;
-    width: 50%;
+    height: 50%;
+    width: 40%;
     box-sizing: border-box;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -84,8 +84,8 @@ html.dark-mode .main_container {
 
 .box{
     display: flex;
-    height: 25%;
-    width: 70%;
+    height: 20%;
+    width: 60%;
     align-items: center;        /* Wyrównanie wertykalne */
     justify-content: center;    /* Wyrównanie horyzontalne */
     text-align: center;
@@ -98,8 +98,8 @@ html.dark-mode .main_container {
 }
 html.dark-mode .box{
     display: flex;
-    height: 25%;
-    width: 70%;
+    height: 20%;
+    width: 60%;
     align-items: center;        /* Wyrównanie wertykalne */
     justify-content: center;    /* Wyrównanie horyzontalne */
     text-align: center;

@@ -56,6 +56,10 @@ html.dark-mode #title{
     justify-content: center;
     align-items: center;
     cursor: pointer;    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 } 
 
 html.dark-mode #back{
@@ -70,7 +74,11 @@ html.dark-mode #back{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;    
+    cursor: pointer;   
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal; 
 } 
   
 #back:hover{
@@ -148,7 +156,7 @@ html.dark-mode .label {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 3.5vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
 }
 html.dark-mode .input {
@@ -157,7 +165,7 @@ html.dark-mode .input {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 3.5vmin;
+    font-size: 2.5vmin;
     border-radius: 2vmin;
     background-color: #F9F9E7;
 }
@@ -173,6 +181,10 @@ html.dark-mode .input {
     color: white;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 html.dark-mode #del_acc_button {
     height: 13.33333%;
@@ -186,6 +198,10 @@ html.dark-mode #del_acc_button {
     color: #212121;
     cursor: pointer;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #del_acc_button:hover {
