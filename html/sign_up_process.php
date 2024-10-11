@@ -10,6 +10,7 @@ error_reporting(E_ALL);
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 // If necessary, modify the path in the require statement below to refer to the
 // location of your Composer autoload.php file.
@@ -77,7 +78,10 @@ if (isset($_POST['sign_up'])){
         return $url_safe_token;
     }
 
-    $secret_key = getenv('SECRET_KEY');
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $secret_key = $_ENV['SECRET_KEY'];
     $token = generateEmailVerificationToken($username, $secret_key);
     $verification_link = 'https://retro-ciecie.pl/email_verification.php?token='.$token.'';
 
@@ -94,8 +98,8 @@ if (isset($_POST['sign_up'])){
     $recipient = $email;
 
     // Replace smtp_username with your Amazon SES SMTP user name.
-    $usmtp = getenv('AWS_SES_SMTP_USERNAME');
-    $psmtp = getenv('AWS_SES_SMTP_PASSWORD');
+    $usmtp = $_ENV['AWS_SES_SMTP_USERNAME'];
+    $psmtp = $_ENV['AWS_SES_SMTP_PASSWORD'];
 
     // Specify a configuration set. If you do not want to use a configuration
     // set, comment or remove the next line.
