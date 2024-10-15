@@ -63,6 +63,7 @@ html.dark-mode #title{
     background-color: aliceblue;
     border: solid 3px #052526;
     border-radius: 2vmin;
+    user-select: none;
 
 }
 html.dark-mode .main_container {
@@ -80,6 +81,7 @@ html.dark-mode .main_container {
     border-radius: 2vmin;
     background-color: #212121;
     border: solid 3px #F5F5DC ;
+    user-select: none;
 }
 
 .box{
@@ -136,6 +138,7 @@ html.dark-mode .box:hover{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
     
 }
 html.dark-mode #back{
@@ -155,6 +158,7 @@ html.dark-mode #back{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
     
 }  
 

@@ -60,6 +60,7 @@ html.dark-mode #title{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 } 
 
 html.dark-mode #back{
@@ -79,6 +80,7 @@ html.dark-mode #back{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal; 
+    user-select: none;
 } 
   
 #back:hover{
@@ -185,6 +187,7 @@ html.dark-mode .input {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 html.dark-mode #del_acc_button {
     height: 13.33333%;
@@ -202,6 +205,7 @@ html.dark-mode #del_acc_button {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 
 #del_acc_button:hover {

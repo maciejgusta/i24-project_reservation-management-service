@@ -158,6 +158,7 @@ html.dark-mode .meeting_cell {
     font-size: 2vmin;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
 
 html.dark-mode .meeting_options {
@@ -172,6 +173,7 @@ html.dark-mode .meeting_options {
     font-size: 2vmin;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
 
 .meeting_options:hover {
@@ -200,6 +202,7 @@ html.dark-mode .meeting_options:hover {
     cursor: pointer;
     border-bottom-left-radius: 2.5vmin;
     border-bottom-right-radius: 2.5vmin;
+    user-select: none;
 }
 
 html.dark-mode .return_to_home_page_block {
@@ -216,6 +219,7 @@ html.dark-mode .return_to_home_page_block {
     cursor: pointer;
     border-bottom-left-radius: 2.5vmin;
     border-bottom-right-radius: 2.5vmin;
+    user-select: none;
 }
 
 .return_to_home_page_block:hover {

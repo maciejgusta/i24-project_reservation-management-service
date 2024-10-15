@@ -115,6 +115,7 @@ html.dark-mode .input {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 html.dark-mode #log_in_button {
     height: 13.33333%;
@@ -132,6 +133,7 @@ html.dark-mode #log_in_button {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 
 #log_in_button:hover {
@@ -171,6 +173,7 @@ html.dark-mode #log_in_button:hover {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 html.dark-mode #sign_up_button {
     height: 66.6666%;
@@ -188,6 +191,7 @@ html.dark-mode #sign_up_button {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 
 #sign_up_button:hover {
@@ -226,10 +230,12 @@ html.dark-mode #forgot_password_div {
 
 #forgot_password_link {
     color: #052526;
+    user-select: none;
 }
 
 html.dark-mode #forgot_password_link {
     color: #F6F6DF;
+    user-select: none;
 }
 
 #forgot_password_button:hover {

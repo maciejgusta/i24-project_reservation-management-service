@@ -179,6 +179,7 @@ html.dark-mode .week_block {
     justify-content: center;
     align-items: center;
     font-size: 3.5vh;
+    user-select: none;
 }
 .outer_week_backward:hover{
     background-color: #0C4E55;
@@ -195,6 +196,7 @@ html.dark-mode .outer_week_backward:hover{
     font-size: 3.5vh;
     background-color: #C0C0AE;
     border-top-left-radius: 3vmin;
+    user-select: none;
 
 }
 .outer_week_forward {
@@ -206,6 +208,7 @@ html.dark-mode .outer_week_backward:hover{
     justify-content: center;
     align-items: center;
     font-size: 3.5vh;
+    user-select: none;
 }
 .outer_week_forward:hover{
     background-color: #0C4E55;
@@ -222,6 +225,7 @@ html.dark-mode .outer_week_forward:hover{
     font-size: 3.5vh;
     background-color: #C0C0AE;
     border-top-right-radius: 3vmin;
+    user-select: none;
 
 }
 
@@ -303,6 +307,7 @@ html.dark-mode html.dark-mode .settings_block:hover {
     align-items: center;
     font-size: 2.7vmin;
     cursor: pointer;
+    user-select: none;
 }
 .setting_cell:hover{
     background-color: #0C4E55;
@@ -316,6 +321,7 @@ html.dark-mode .setting_cell:hover {
     font-size: 2.7vmin;
     cursor: pointer;
     background-color: #C0C0AE;
+    user-select: none;
 }
 .setting_cell_left {
     height: 100%;
@@ -325,6 +331,7 @@ html.dark-mode .setting_cell:hover {
     align-items: center;
     font-size: 2.7vmin;
     cursor: pointer;
+    user-select: none;
 }
 .setting_cell_left:hover{
     background-color: #0C4E55;
@@ -350,6 +357,7 @@ html.dark-mode .setting_cell_left:hover {
     align-items: center;
     font-size: 2.7vmin;
     cursor: pointer;
+    user-select: none;
 }
 .setting_cell_right:hover{
     background-color: #0C4E55;

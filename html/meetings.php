@@ -59,16 +59,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetings</title>
     <link rel="stylesheet" href="css/meetings.css">
-    <script>
-        window.onload = function() {
-            <?php
-                if (isset($_SESSION['alert'])){
-                    echo 'alert("'.$_SESSION['alert'].'");';
-                }
-                unset($_SESSION['alert']);
-            ?>
-        }
-    </script>
 </head>
 <body>
     <div class="main_block">
@@ -106,5 +96,16 @@
         <div class="return_to_home_page_block" onclick="window.location.href='home.php'">Return to Home</div>
 
     </div>
+
+    <script>
+        window.onload = function() {
+            <?php
+                if (isset($_SESSION['alert'])){
+                    echo 'alert("'.$_SESSION['alert'].'");';
+                }
+                unset($_SESSION['alert']);
+            ?>
+        }
+    </script>
 </body>
 </html>
