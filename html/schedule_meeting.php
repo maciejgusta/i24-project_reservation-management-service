@@ -43,7 +43,7 @@
 </head>
 <body>
     <div id="back" onclick="window.location.href='<?php echo $_SESSION['return']; ?>'">Return</div>
-
+    <div id="title">Schedule a meeting</div>
 	<div id="schedule_block">
         <form id="schedule_form" action="schedule_meeting_backend.php" method="post">
             

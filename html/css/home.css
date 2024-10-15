@@ -146,9 +146,9 @@ html.dark-mode body {
     position: relative;
     display: flex;
     flex-direction: row;
-    border-top: 1px solid lightblue;
-    border-left: 1px solid lightblue;
-    border-right: 1px solid lightblue;
+    border-top: 1px solid #167383;
+    border-left: 1px solid #167383;
+    border-right: 1px solid #167383;
     border-top-left-radius: 3vmin;
     border-top-right-radius: 3vmin;
     background-color: #167383;
@@ -180,6 +180,10 @@ html.dark-mode .week_block {
     align-items: center;
     font-size: 3.5vh;
 }
+.outer_week_backward:hover{
+    background-color: #0C4E55;
+    border-top-left-radius: 3vmin;
+}
 html.dark-mode .outer_week_backward:hover{
     width: 20%;
     height: 100%;
@@ -202,6 +206,10 @@ html.dark-mode .outer_week_backward:hover{
     justify-content: center;
     align-items: center;
     font-size: 3.5vh;
+}
+.outer_week_forward:hover{
+    background-color: #0C4E55;
+    border-top-right-radius: 3vmin;
 }
 html.dark-mode .outer_week_forward:hover{
     width: 20%;
@@ -251,9 +259,9 @@ html.dark-mode .inner_week {
     display: flex;
     flex-direction: row;
     position: relative;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-bottom: 1px solid #167383;
+    border-left: 1px solid #167383;
+    border-right: 1px solid #167383;
     border-bottom-left-radius: 3vmin;
     border-bottom-right-radius: 3vmin;
     background-color: #167383;
@@ -296,6 +304,9 @@ html.dark-mode html.dark-mode .settings_block:hover {
     font-size: 2.7vmin;
     cursor: pointer;
 }
+.setting_cell:hover{
+    background-color: #0C4E55;
+}
 html.dark-mode .setting_cell:hover {
     height: 100%;
     width: 33.3333%;
@@ -314,6 +325,10 @@ html.dark-mode .setting_cell:hover {
     align-items: center;
     font-size: 2.7vmin;
     cursor: pointer;
+}
+.setting_cell_left:hover{
+    background-color: #0C4E55;
+    border-bottom-left-radius: 3vmin;
 }
 html.dark-mode .setting_cell_left:hover {
     height: 100%;
@@ -335,6 +350,10 @@ html.dark-mode .setting_cell_left:hover {
     align-items: center;
     font-size: 2.7vmin;
     cursor: pointer;
+}
+.setting_cell_right:hover{
+    background-color: #0C4E55;
+    border-bottom-right-radius: 3vmin;
 }
 html.dark-mode .setting_cell_right:hover {
     height: 100%;
